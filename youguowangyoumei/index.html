@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>优果网优美图库官网-高清水果摄影图库与品种图鉴</title>
+<meta name="description" content="优果网优美图库官网收录三千余种水果品种高清图鉴，含产区实拍、成熟度对比、果面瑕疵标注与商用授权说明。按品种、产区、季节检索，附可核对的拍摄日期与实拍地点，供撰稿、选品与包装设计参考。">
+<meta name="keywords" content="优果网优美图库官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='20' fill='%23d94f2b'/%3E%3Cpath d='M32 18c2-6 8-9 14-8-1 7-6 11-14 8z' fill='%235c8f3a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#221b14;
+  --ink-soft:#5b4f44;
+  --ink-mute:#8a7c6e;
+  --paper:#fbf7f1;
+  --card:#ffffff;
+  --line:#e6dccd;
+  --line-strong:#d3c4ad;
+  --brand:#d94f2b;
+  --brand-deep:#a83518;
+  --leaf:#5c8f3a;
+  --leaf-soft:#eaf2e0;
+  --sun:#e8a13a;
+  --sun-soft:#fdf0d8;
+  --radius-s:6px;
+  --radius-m:10px;
+  --radius-l:16px;
+  --shadow-s:0 1px 2px rgba(52,36,20,.06),0 1px 6px rgba(52,36,20,.05);
+  --shadow-m:0 2px 6px rgba(52,36,20,.08),0 8px 22px rgba(52,36,20,.07);
+  --sp-1:6px;--sp-2:10px;--sp-3:16px;--sp-4:24px;--sp-5:34px;--sp-6:48px;--sp-7:66px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --fs-h1:clamp(1.9rem,4.6vw,3.1rem);
+  --fs-h2:clamp(1.3rem,2.4vw,1.62rem);
+  --fs-h3:1.06rem;
+  --fs-body:1rem;
+  --fs-s:.875rem;
+  --fs-xs:.78rem;
+  --sticky-h:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);
+  font-size:var(--fs-body);line-height:1.78;-webkit-font-smoothing:antialiased;
+  padding-top:var(--sticky-h);
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.32;margin:0;letter-spacing:.01em}
+p{margin:0 0 var(--sp-3)}
+ul,ol{margin:0 0 var(--sp-3);padding-left:1.25em}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--sp-4)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brand);color:#fff;padding:8px 14px;z-index:200}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- 吸顶区 ---------- */
+.stick{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(251,247,241,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow-s);
+}
+.notice{
+  background:linear-gradient(90deg,var(--brand-deep),var(--brand));
+  color:#fff;font-size:var(--fs-xs);letter-spacing:.01em;
+}
+.notice .wrap{
+  display:flex;gap:var(--sp-2);align-items:center;
+  padding-top:7px;padding-bottom:7px;flex-wrap:wrap;
+}
+.notice b{font-weight:600}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:#ffd9a3;flex:none}
+.notice a{color:#ffe4c8;text-decoration:underline}
+.notice time{opacity:.85;margin-left:auto;white-space:nowrap}
+
+.header{display:flex;align-items:center;gap:var(--sp-3);padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:40px;height:40px;flex:none}
+.brand-name{font-size:1.05rem;font-weight:700;color:var(--ink);letter-spacing:.02em;white-space:nowrap}
+.brand-name:hover{text-decoration:none;color:var(--brand-deep)}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.main-nav a{
+  color:var(--ink-soft);font-size:var(--fs-s);padding:7px 10px;border-radius:var(--radius-s);
+}
+.main-nav a:hover,.main-nav a.active{background:var(--sun-soft);color:var(--brand-deep);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;margin-left:auto}
+.menu-btn{
+  display:none;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line-strong);
+  color:var(--ink);font:inherit;font-size:var(--fs-s);padding:7px 12px;border-radius:var(--radius-s);cursor:pointer;
+}
+.menu-btn:hover{background:var(--sun-soft)}
+.search{position:relative}
+.search input{
+  font:inherit;font-size:var(--fs-s);padding:7px 11px;width:172px;
+  border:1px solid var(--line-strong);border-radius:999px;background:var(--card);color:var(--ink);
+}
+.search input::placeholder{color:var(--ink-mute)}
+.search-out{
+  position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--card);
+  border:1px solid var(--line-strong);border-radius:var(--radius-m);box-shadow:var(--shadow-m);
+  padding:6px;font-size:var(--fs-s);display:none;z-index:120;max-height:264px;overflow:auto;
+}
+.search-out.open{display:block}
+.search-out a{display:block;padding:6px 8px;border-radius:var(--radius-s);color:var(--ink)}
+.search-out a:hover{background:var(--sun-soft);text-decoration:none}
+.search-out .empty{color:var(--ink-mute);padding:8px;line-height:1.6}
+
+/* ---------- 首屏 ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--sp-6);align-items:center;padding-top:var(--sp-6);padding-bottom:var(--sp-6)}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);letter-spacing:.14em;
+  color:var(--brand-deep);text-transform:uppercase;border:1px solid var(--line-strong);
+  background:var(--card);padding:5px 11px;border-radius:999px;margin-bottom:var(--sp-3);
+}
+.hero-kicker i{width:7px;height:7px;border-radius:50%;background:var(--leaf);display:block}
+h1{font-size:var(--fs-h1);font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--brand-deep)}
+.hero-lead{margin-top:var(--sp-3);font-size:1.03rem;color:var(--ink-soft);max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--sp-4)}
+.btn{
+  display:inline-block;font-size:var(--fs-s);padding:10px 18px;border-radius:999px;
+  border:1px solid var(--brand);background:var(--brand);color:#fff;font-weight:600;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow-m)}
+.btn.ghost{background:var(--card);color:var(--brand-deep);border-color:var(--line-strong)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:var(--sp-4);margin-top:var(--sp-5);padding-top:var(--sp-3);border-top:1px dashed var(--line-strong)}
+.hero-stats div{min-width:96px}
+.hero-stats b{display:block;font-size:1.28rem;color:var(--brand-deep);font-variant-numeric:tabular-nums}
+.hero-stats span{font-size:var(--fs-xs);color:var(--ink-mute)}
+.hero-art{position:relative;min-height:330px}
+.hero-art svg{width:100%;height:auto;position:relative;z-index:2}
+.hero-art .blob{
+  position:absolute;border-radius:50%;filter:blur(0px);opacity:.5;z-index:1;
+}
+.hero-art .b1{width:220px;height:220px;background:#f7d9b8;left:-24px;top:-16px}
+.hero-art .b2{width:150px;height:150px;background:var(--leaf-soft);right:6%;bottom:2%;border-radius:38% 62% 55% 45%}
+.hero-tag{
+  position:absolute;z-index:3;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-m);box-shadow:var(--shadow-m);font-size:var(--fs-xs);
+  padding:8px 12px;color:var(--ink-soft);line-height:1.5;
+}
+.hero-tag b{display:block;color:var(--ink);font-size:var(--fs-s)}
+.hero-tag.t1{left:-2%;bottom:13%}
+.hero-tag.t2{right:-1%;top:12%}
+
+/* ---------- 通用板块 ---------- */
+main{display:block}
+.sec{padding:var(--sp-6) 0;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--sticky-h) + 12px)}
+.sec:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:flex-end;gap:var(--sp-3);flex-wrap:wrap;margin-bottom:var(--sp-4)}
+.sec-head h2{font-size:var(--fs-h2);font-weight:750}
+.sec-head .sub{font-size:var(--fs-s);color:var(--ink-mute);margin-left:auto;max-width:34em}
+.sec-no{font-size:var(--fs-xs);color:var(--brand);font-weight:700;letter-spacing:.1em;display:block;margin-bottom:4px}
+.grid{display:grid;gap:var(--sp-3)}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--sp-3);box-shadow:var(--shadow-s);
+}
+.card h3{font-size:var(--fs-h3);margin-bottom:6px}
+.card p{font-size:var(--fs-s);color:var(--ink-soft);margin-bottom:var(--sp-2)}
+.card p:last-child{margin-bottom:0}
+.card .meta{font-size:var(--fs-xs);color:var(--ink-mute);display:flex;gap:10px;flex-wrap:wrap}
+.tagline{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--sp-2)}
+.chip{
+  font-size:var(--fs-xs);border:1px solid var(--line-strong);background:var(--paper);
+  color:var(--ink-soft);padding:3px 9px;border-radius:999px;white-space:nowrap;
+}
+.chip:hover{background:var(--sun-soft);text-decoration:none;color:var(--brand-deep)}
+.chip.leaf{background:var(--leaf-soft);border-color:#c8dcb4;color:#3f6b26}
+
+/* 分类索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-3)}
+.cat{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--sp-3);color:var(--ink);transition:transform .18s ease,border-color .18s ease;
+}
+.cat:hover{text-decoration:none;transform:translateY(-3px);border-color:var(--brand);box-shadow:var(--shadow-m)}
+.cat b{display:block;font-size:var(--fs-body);margin-bottom:3px}
+.cat span{font-size:var(--fs-xs);color:var(--ink-mute);display:block;line-height:1.55}
+.cat em{font-style:normal;display:inline-block;margin-top:8px;font-size:var(--fs-xs);color:var(--brand-deep);font-variant-numeric:tabular-nums}
+
+/* 列表型 */
+.list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.list li{
+  display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:var(--sp-3);
+  padding:13px 0;border-bottom:1px solid var(--line);align-items:baseline;
+}
+.list .date{font-size:var(--fs-xs);color:var(--ink-mute);font-variant-numeric:tabular-nums}
+.list .t{font-size:var(--fs-s);color:var(--ink)}
+.list .t b{font-weight:650}
+.list .t span{color:var(--ink-soft);display:block;font-size:var(--fs-xs);margin-top:2px}
+.list .badge{font-size:var(--fs-xs);color:var(--brand-deep);background:var(--sun-soft);padding:2px 8px;border-radius:999px;white-space:nowrap}
+
+/* 深度解析 */
+.deep{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:var(--sp-5);align-items:start}
+.prose{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-l);padding:var(--sp-5);box-shadow:var(--shadow-s)}
+.prose h3{font-size:var(--fs-h3);margin:var(--sp-4) 0 var(--sp-2);padding-left:11px;border-left:4px solid var(--brand)}
+.prose h3:first-of-type{margin-top:var(--sp-2)}
+.prose p{color:var(--ink-soft)}
+.prose strong{color:var(--ink)}
+.prose ul{color:var(--ink-soft)}
+.prose li{margin-bottom:5px}
+.prose .lead{font-size:1.02rem;color:var(--ink)}
+.pull{
+  border-left:3px solid var(--leaf);background:var(--leaf-soft);border-radius:0 var(--radius-s) var(--radius-s) 0;
+  padding:var(--sp-3);margin:var(--sp-3) 0;font-size:var(--fs-s);color:#33491f;
+}
+.pull b{display:block;margin-bottom:4px;color:#2b3d19}
+table{width:100%;border-collapse:collapse;font-size:var(--fs-s);margin:var(--sp-3) 0}
+caption{text-align:left;font-size:var(--fs-xs);color:var(--ink-mute);padding-bottom:6px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--sun-soft);font-weight:650;color:var(--ink)}
+td{color:var(--ink-soft)}
+.deep-side{display:grid;gap:var(--sp-3);position:sticky;top:calc(var(--sticky-h) + 14px)}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3);box-shadow:var(--shadow-s)}
+.side-card h3{font-size:var(--fs-s);letter-spacing:.05em;color:var(--brand-deep);margin-bottom:8px}
+.side-nav{list-style:none;padding:0;margin:0;font-size:var(--fs-s)}
+.side-nav li{margin-bottom:2px}
+.side-nav a{display:block;padding:6px 9px;border-radius:var(--radius-s);color:var(--ink-soft);border-left:2px solid transparent}
+.side-nav a:hover{background:var(--paper);text-decoration:none}
+.side-nav a.on{background:var(--sun-soft);color:var(--brand-deep);border-left-color:var(--brand);font-weight:600}
+.checklist{list-style:none;padding:0;margin:0;font-size:var(--fs-s);color:var(--ink-soft)}
+.checklist li{display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.checklist li:last-child{border-bottom:0}
+.checklist b{font-variant-numeric:tabular-nums;color:var(--brand-deep);flex:none}
+
+/* 步骤 */
+.steps{counter-reset:s;display:grid;gap:var(--sp-3);grid-template-columns:repeat(4,minmax(0,1fr))}
+.step{
+  counter-increment:s;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius-m);padding:var(--sp-3) var(--sp-3) var(--sp-3);position:relative;
+}
+.step::before{
+  content:counter(s,decimal-leading-zero);display:block;font-size:var(--fs-xs);font-weight:700;
+  color:#fff;background:var(--brand);width:26px;height:26px;border-radius:50%;
+  line-height:26px;text-align:center;margin-bottom:8px;font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:var(--fs-s);margin-bottom:5px}
+.step p{font-size:var(--fs-xs);color:var(--ink-soft);margin:0}
+
+/* 对照 */
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line-strong);border-radius:var(--radius-m);overflow:hidden;background:var(--card)}
+.compare > div{padding:var(--sp-3)}
+.compare > div:first-child{border-right:1px solid var(--line-strong)}
+.compare h3{font-size:var(--fs-s);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.compare h3 .pill{font-size:10px;padding:2px 7px;border-radius:999px;background:var(--leaf-soft);color:#3f6b26;font-weight:600}
+.compare .alt h3 .pill{background:var(--sun-soft);color:var(--brand-deep)}
+.compare ul{font-size:var(--fs-s);color:var(--ink-soft);margin:0;padding-left:1.1em}
+.compare li{margin-bottom:6px}
+
+/* FAQ */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:2px 0}
+.faq summary{
+  cursor:pointer;list-style:none;padding:13px 32px 13px 2px;position:relative;
+  font-size:var(--fs-body);font-weight:600;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:1.15rem;color:var(--brand);font-weight:400;
+}
+.faq details[open] summary::after{content:"–"}
+.faq details[open] summary{color:var(--brand-deep)}
+.faq .ans{padding:0 34px var(--sp-3) 2px;font-size:var(--fs-s);color:var(--ink-soft)}
+.faq .ans p{margin:0 0 8px}
+
+/* 评论 */
+.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3);display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow-s)}
+.review blockquote{margin:0;font-size:var(--fs-s);color:var(--ink);line-height:1.72}
+.review .who{display:flex;align-items:center;gap:8px;font-size:var(--fs-xs);color:var(--ink-mute);margin-top:auto}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--sun-soft);color:var(--brand-deep);display:grid;place-items:center;font-weight:700;font-size:11px;flex:none}
+.stars{color:var(--sun);font-size:var(--fs-xs);letter-spacing:1px}
+.rating-sum{display:flex;flex-wrap:wrap;gap:var(--sp-4);align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--sp-3);margin-bottom:var(--sp-3)}
+.rating-sum b{font-size:1.6rem;color:var(--brand-deep);font-variant-numeric:tabular-nums}
+.rating-sum small{font-size:var(--fs-xs);color:var(--ink-mute);display:block}
+
+/* 相关推荐 */
+.reco{display:flex;flex-wrap:wrap;gap:8px}
+.reco a{
+  border:1px solid var(--line-strong);background:var(--card);border-radius:999px;
+  padding:6px 14px;font-size:var(--fs-s);color:var(--ink-soft);
+}
+.reco a:hover{border-color:var(--brand);color:var(--brand-deep);text-decoration:none;background:var(--sun-soft)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line-strong);margin-left:6px}
+.timeline li{position:relative;padding:0 0 var(--sp-3) var(--sp-4)}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;
+  background:var(--card);border:2px solid var(--brand);
+}
+.timeline time{font-size:var(--fs-xs);color:var(--brand-deep);font-weight:650;font-variant-numeric:tabular-nums;display:block}
+.timeline p{font-size:var(--fs-s);color:var(--ink-soft);margin:2px 0 0}
+
+/* 图文卡 */
+.figure-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;box-shadow:var(--shadow-s)}
+.figure-card img{width:100%;height:170px;object-fit:cover}
+.figure-card .body{padding:var(--sp-3)}
+.figure-card h3{font-size:var(--fs-s);margin-bottom:4px}
+.figure-card p{font-size:var(--fs-xs);color:var(--ink-soft);margin:0}
+
+/* 页尾 */
+footer{background:#241c14;color:#d8cdbf;padding:var(--sp-6) 0 var(--sp-4);font-size:var(--fs-s)}
+footer a{color:#f3e6d4}
+.foot-top{display:grid;grid-template-columns:1.4fr repeat(3,minmax(0,1fr));gap:var(--sp-4);padding-bottom:var(--sp-5);border-bottom:1px solid #3d3226}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:var(--sp-2)}
+.foot-brand .brand-name{color:#fff}
+.foot-slogan{color:#b8ab9b;max-width:26em;margin-bottom:var(--sp-3);line-height:1.7}
+.foot-col h3{font-size:var(--fs-s);color:#fff;margin-bottom:10px;letter-spacing:.04em}
+.foot-col ul{list-style:none;padding:0;margin:0}
+.foot-col li{margin-bottom:6px;font-size:var(--fs-xs)}
+.foot-col a{color:#c9bcab;font-size:var(--fs-xs)}
+.foot-note{display:flex;flex-wrap:wrap;gap:var(--sp-3) var(--sp-4);padding-top:var(--sp-3);font-size:var(--fs-xs);color:#a2968a;justify-content:space-between;align-items:flex-start}
+.foot-note p{margin:0;max-width:64em;line-height:1.7}
+.to-top{
+  position:fixed;right:18px;bottom:18px;z-index:90;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line-strong);background:var(--card);color:var(--brand-deep);
+  font:inherit;font-size:12px;cursor:pointer;box-shadow:var(--shadow-m);display:none;
+  align-items:center;justify-content:center;
+}
+.to-top.show{display:flex}
+.to-top:hover{background:var(--sun-soft)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .hero .wrap{grid-template-columns:1fr;gap:var(--sp-4)}
+  .hero-art{order:2;min-height:250px;max-width:520px}
+  .deep{grid-template-columns:1fr}
+  .deep-side{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reviews{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  :root{--sticky-h:96px}
+  .g3,.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--paper);border-bottom:1px solid var(--line-strong);
+    padding:var(--sp-2) var(--sp-4) var(--sp-3);box-shadow:var(--shadow-m);
+    flex-direction:column;align-items:stretch;gap:0;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 8px;border-bottom:1px solid var(--line);font-size:var(--fs-body)}
+  .main-nav a:last-child{border-bottom:0}
+  .header{position:relative;flex-wrap:wrap}
+  .head-tools{margin-left:auto}
+  .menu-btn{display:inline-flex}
+  .search input{width:150px}
+  .notice time{margin-left:0;width:100%}
+}
+@media (max-width:720px){
+  :root{--sticky-h:132px}
+  .wrap{padding:0 var(--sp-3)}
+  .hero .wrap{padding-top:var(--sp-4);padding-bottom:var(--sp-4)}
+  .hero-stats{gap:var(--sp-3)}
+  .g3,.g2,.g4,.cat-grid,.steps,.reviews,.compare{grid-template-columns:1fr}
+  .compare > div:first-child{border-right:0;border-bottom:1px solid var(--line-strong)}
+  .deep-side{grid-template-columns:1fr}
+  .prose{padding:var(--sp-4)}
+  .list li{grid-template-columns:72px minmax(0,1fr);gap:8px;row-gap:4px}
+  .list .badge{grid-column:2;justify-self:start}
+  .foot-top{grid-template-columns:1fr;gap:var(--sp-3)}
+  .sec{padding:var(--sp-5) 0}
+  .search input{width:100%}
+  .head-tools{width:100%;order:3;justify-content:space-between}
+  .hero-tag.t1{left:0;bottom:4%}
+  .hero-tag.t2{right:0;top:4%}
+  .to-top{bottom:14px;right:14px}
+  .hero-art{min-height:220px}
+}
+@media (max-width:400px){
+  .search input{width:132px;font-size:12px}
+  .brand-name{font-size:.98rem}
+  .hero-tag{font-size:10px;padding:6px 9px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.cat:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="/#top-content">跳到主要内容</a>
+
+<div class="stick">
+  <div class="notice" role="status">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <b>优果网优美图库官网</b>
+      <span>11月7日新增赣南脐橙与融安金桔实拍 168 张，果径分级尺同步上线</span>
+      <a href="/#latest">查看本批更新</a>
+      <time datetime="2026-11-08">今天 09:20 更新</time>
+    </div>
+  </div>
+  <header class="header wrap">
+    <a class="brand" href="/#top-content" aria-label="返回首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="果实与叶片图形标志">
+        <circle cx="32" cy="37" r="19" fill="#d94f2b"/>
+        <path d="M32 20c1.6-6.4 7.4-10 14-9.2-1 7.3-6.4 11.6-14 9.2z" fill="#5c8f3a"/>
+        <path d="M20 34c3-4 8-6 12-2" stroke="#f3a07e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <circle cx="41" cy="46" r="2" fill="#f7bda8" opacity=".8"/>
+      </svg>
+      <span class="brand-name">优果网优美图库官网</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" type="button">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      频道
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="主要频道">
+      <a href="/#overview">图库总览</a>
+      <a href="/#picked">编辑精选</a>
+      <a href="/#latest">最新入库</a>
+      <a href="/#channels">品种频道</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">拍摄指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search">
+        <label for="q" class="skip">站内检索</label>
+        <input id="q" type="search" placeholder="搜品种、产区、拍摄日" autocomplete="off" aria-describedby="searchOut">
+        <div class="search-out" id="searchOut" role="listbox" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="hero" id="top-content">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker"><i aria-hidden="true"></i>品种图鉴 · 产区实拍 · 授权清晰</span>
+      <h1>优果网优美图库官网</h1>
+      <p class="hero-lead">覆盖柑橘、苹果、梨、桃李、葡萄、浆果、热带果、干果八大类共 3120 个条目。每张照片附拍摄日期、产地果园、果实分级与果面瑕疵说明，商用授权按单张登记，可追溯到具体批次。</p>
+      <div class="hero-actions">
+        <a class="btn" href="/#channels">按品种找图</a>
+        <a class="btn ghost" href="/#latest">看11月7日新图</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>3120</b><span>在库品种条目</span></div>
+        <div><b>41600+</b><span>实拍照片</span></div>
+        <div><b>68</b><span>合作果园产地</span></div>
+        <div><b>2026-11-07</b><span>最近一批拍摄</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="blob b1"></span><span class="blob b2"></span>
+      <svg viewBox="0 0 460 340" role="presentation">
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fbe3cf"/><stop offset="1" stop-color="#f8f1e4"/>
+          </linearGradient>
+          <linearGradient id="og" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f2843f"/><stop offset="1" stop-color="#d94f2b"/>
+          </linearGradient>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#7fae56"/><stop offset="1" stop-color="#4c7a2e"/>
+          </linearGradient>
+        </defs>
+        <rect x="26" y="26" width="408" height="288" rx="22" fill="url(#pg)" stroke="#e6dccd"/>
+        <circle cx="152" cy="182" r="66" fill="url(#og)"/>
+        <path d="M152 118c4-17 20-26 36-24-3 19-17 30-36 24z" fill="url(#lg)"/>
+        <circle cx="300" cy="196" r="44" fill="#e8a13a"/>
+        <path d="M300 154c3-12 14-18 25-17-2 13-12 21-25 17z" fill="#6f9e45"/>
+        <circle cx="252" cy="102" r="27" fill="#e5563b"/>
+        <circle cx="336" cy="116" r="19" fill="#f3c14e"/>
+        <path d="M62 250h130M62 266h96" stroke="#d3c4ad" stroke-width="7" stroke-linecap="round"/>
+        <path d="M306 92c14-9 30-6 40 4" stroke="#b98a52" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <circle cx="205" cy="205" r="6" fill="#f7bda8" opacity=".75"/>
+        <circle cx="128" cy="160" r="4" fill="#fff" opacity=".7"/>
+      </svg>
+      <div class="hero-tag t1"><b>赣南脐橙 · 6.8cm 一级</b>2026-11-07 江西信丰</div>
+      <div class="hero-tag t2"><b>融安金桔 · 滑皮</b>糖度 18.2 当天测</div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- 1 领域概览 -->
+  <section class="sec" id="overview">
+    <div class="sec-head">
+      <div><span class="sec-no">01 / 领域概览</span><h2>水果图鉴在解决什么问题</h2></div>
+      <p class="sub">选品报价、包装设计、食谱撰稿三类需求对照片的要求完全不同，图库按用途分层而不是按好看程度排序。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <h3>品种辨识类</h3>
+        <p>同一品种在不同产区外观差别明显。图库为每个条目保留至少三个产区的果实横切、纵切与外皮近景，标注果径区间和糖度实测值。</p>
+        <p class="meta"><span>条目 3120</span><span>平均每品种 13 张</span></p>
+      </article>
+      <article class="card">
+        <h3>商业选品类</h3>
+        <p>电商主图需要干净背景和标准果形。此类照片统一 45° 俯拍、白底或浅灰底，果面瑕疵不做修除，方便判断真实货架状态。</p>
+        <p class="meta"><span>白底图 9400 张</span><span>含瑕疵标注</span></p>
+      </article>
+      <article class="card">
+        <h3>内容撰稿类</h3>
+        <p>菜谱与产季稿件需要场景感。带枝叶、果园背景、采摘动作的照片单列，授权范围注明是否含人物肖像。</p>
+        <p class="meta"><span>场景图 12600 张</span><span>68 个果园</span></p>
+      </article>
+    </div>
+    <div class="compare" style="margin-top:var(--sp-3)">
+      <div>
+        <h3>拍照能解决的 <span class="pill">外观可核</span></h3>
+        <ul>
+          <li>果形、果径与果皮色泽可以量化对比，赣南脐橙一级果横径 6.5—7.0cm。</li>
+          <li>成熟度差异肉眼可分，脐橙由青转橙的临界点在图库中标注了具体日期。</li>
+          <li>包装设计的配色参考可以直接取色，色值随图附注。</li>
+        </ul>
+      </div>
+      <div class="alt">
+        <h3>照片解决不了的 <span class="pill">口感与等级</span></h3>
+        <ul>
+          <li>糖酸比只看画面无法判断，图库内数值来自果园当日折光仪读数。</li>
+          <li>耐储性取决于采收期与预冷条件，与外观相关但不等于外观。</li>
+          <li>同一批货的等级判定需按国标取样，单张照片不构成分级依据。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 精选内容推荐 -->
+  <section class="sec" id="picked">
+    <div class="sec-head">
+      <div><span class="sec-no">02 / 编辑精选</span><h2>本周选出的四组实拍</h2></div>
+      <p class="sub">挑图标准是信息量而非构图：同一果实至少给出外观、切面和分级参照物。</p>
+    </div>
+    <div class="grid g2">
+      <article class="figure-card">
+        <img src="https://picsum.photos/seed/orange-gannan-2026/720/340" width="720" height="340" loading="lazy" alt="赣南脐橙一级果白底俯拍，旁置果径尺参照">
+        <div class="body">
+          <h3>赣南脐橙分级对照：6.5cm 与 7.5cm 的差别</h3>
+          <p>同园同日采摘，两组各 12 果，白底俯拍并并列果径尺。可用于包装规格说明的素材。</p>
+          <div class="meta" style="margin-top:8px"><span>2026-11-07</span><span>江西信丰</span><span>24 张</span></div>
+        </div>
+      </article>
+      <article class="figure-card">
+        <img src="https://picsum.photos/seed/kumquat-rongan-2026/720/340" width="720" height="340" loading="lazy" alt="融安滑皮金桔整果与横切面并置，果面有细小油胞">
+        <div class="body">
+          <h3>融安滑皮金桔的油胞与糖度对照</h3>
+          <p>滑皮与普通金桔同框，横切面油胞密度差异明显。随图记录当日糖度 18.2 与 15.6。</p>
+          <div class="meta" style="margin-top:8px"><span>2026-11-07</span><span>广西融安</span><span>31 张</span></div>
+        </div>
+      </article>
+      <article class="figure-card">
+        <img src="https://picsum.photos/seed/pear-yali-2026/720/340" width="720" height="340" loading="lazy" alt="鸭梨果锈分布近景，左侧果面有纵向锈斑">
+        <div class="body">
+          <h3>鸭梨果锈怎么看：三条锈斑的实拍记录</h3>
+          <p>果锈面积与套袋时间相关，这组照片保留了未套袋、单层袋、双层袋三种状态。</p>
+          <div class="meta" style="margin-top:8px"><span>2026-10-28</span><span>河北泊头</span><span>18 张</span></div>
+        </div>
+      </article>
+      <article class="figure-card">
+        <img src="https://picsum.photos/seed/grape-sunshine-2026/720/340" width="720" height="340" loading="lazy" alt="阳光玫瑰葡萄整串侧拍，果粒表面有自然果粉">
+        <div class="body">
+          <h3>阳光玫瑰果粉保留度与运输损耗</h3>
+          <p>采后 6 小时与 48 小时各拍一组，果粉脱落程度可以作为短途配送的视觉参照。</p>
+          <div class="meta" style="margin-top:8px"><span>2026-10-24</span><span>云南宾川</span><span>22 张</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3 最新更新 -->
+  <section class="sec" id="latest">
+    <div class="sec-head">
+      <div><span class="sec-no">03 / 最新入库</span><h2>11月第一周新增批次</h2></div>
+      <p class="sub">日期为拍摄当日，入库日期另记。列表只列有完整元数据的批次。</p>
+    </div>
+    <ul class="list">
+      <li>
+        <span class="date">11-07</span>
+        <span class="t"><b>赣南脐橙 · 信丰安西镇</b><span>一级果 168 张，含果径尺、糖度牌、横切面，白底与果园背景各半。</span></span>
+        <span class="badge">新增</span>
+      </li>
+      <li>
+        <span class="date">11-07</span>
+        <span class="t"><b>融安金桔 · 滑皮与普通对照</b><span>31 张，油胞近景 12 张，糖度读数 18.2 与 15.6 同框记录。</span></span>
+        <span class="badge">新增</span>
+      </li>
+      <li>
+        <span class="date">11-05</span>
+        <span class="t"><b>丹东红颜草莓 · 头茬果</b><span>26 张，记录头茬与二茬果形差异，附果重称量照片。</span></span>
+        <span class="badge">补拍</span>
+      </li>
+      <li>
+        <span class="date">11-03</span>
+        <span class="t"><b>烟台红富士 · 条红与片红</b><span>44 张，同一冷库两批货，条纹着色度对比完整。</span></span>
+        <span class="badge">整理</span>
+      </li>
+      <li>
+        <span class="date">10-30</span>
+        <span class="t"><b>蒙自石榴 · 突尼斯软籽</b><span>19 张，籽粒色泽从浅粉到深红的四阶段样本。</span></span>
+        <span class="badge">入库</span>
+      </li>
+      <li>
+        <span class="date">10-26</span>
+        <span class="t"><b>库尔勒香梨 · 授粉果与自然果</b><span>15 张，果形端正度对照，附果梗长度测量。</span></span>
+        <span class="badge">入库</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4 分类入口 -->
+  <section class="sec" id="channels">
+    <div class="sec-head">
+      <div><span class="sec-no">04 / 品种频道</span><h2>按你要搜的名字进</h2></div>
+      <p class="sub">每个频道按产区、成熟期、果径区间二次筛选。数字为该频道当前条目数。</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat" href="/#deep"><b>赣南脐橙</b><span>脐橙类，11月至次年1月成熟，主看果径与脐部形态</span><em>186 条 · 1420 张</em></a>
+      <a class="cat" href="/#picked"><b>阳光玫瑰葡萄</b><span>青提类，果粉、果粒整齐度与穗形是高频检索点</span><em>94 条 · 760 张</em></a>
+      <a class="cat" href="/#picked"><b>红颜草莓</b><span>浆果类，头茬与二茬果形差异需分开看</span><em>72 条 · 590 张</em></a>
+      <a class="cat" href="/#channels"><b>烟台红富士</b><span>苹果类，条红与片红两种着色型，冷库货色差明显</span><em>158 条 · 1180 张</em></a>
+      <a class="cat" href="/#guide"><b>库尔勒香梨</b><span>梨类，果梗长度、萼洼深度与果锈为辨识重点</span><em>61 条 · 470 张</em></a>
+      <a class="cat" href="/#latest"><b>融安滑皮金桔</b><span>柑橘类，油胞密度与果皮厚度直接影响入口感</span><em>38 条 · 300 张</em></a>
+      <a class="cat" href="/#deep"><b>突尼斯软籽石榴</b><span>石榴类，籽粒色泽与软籽比例可对照</span><em>47 条 · 380 张</em></a>
+      <a class="cat" href="/#latest"><b>丹东九九草莓</b><span>浆果类，暖棚果与露地果的果面差异</span><em>29 条 · 240 张</em></a>
+      <a class="cat" href="/#guide"><b>白凤水蜜桃</b><span>桃类，绒毛完整度与缝合线深浅是关键</span><em>55 条 · 430 张</em></a>
+      <a class="cat" href="/#channels"><b>茂名白糖罂荔枝</b><span>荔枝类，果肩、龟裂片与果皮厚度对照</span><em>42 条 · 350 张</em></a>
+      <a class="cat" href="/#deep"><b>徐香猕猴桃</b><span>猕猴桃类，绒毛、果形与后熟软化过程</span><em>36 条 · 290 张</em></a>
+      <a class="cat" href="/#reviews"><b>宁夏中宁枸杞鲜果</b><span>干果类，鲜果与干果两种状态的照片需分开</span><em>24 条 · 190 张</em></a>
+    </div>
+    <div class="tagline" style="margin-top:var(--sp-3)">
+      <a class="chip leaf" href="/#deep">脐橙横径分级图集</a>
+      <a class="chip" href="/#guide">草莓头茬果形对照</a>
+      <a class="chip" href="/#latest">红富士条红片红实拍</a>
+      <a class="chip" href="/#deep">金桔油胞近景</a>
+      <a class="chip" href="/#picked">阳光玫瑰果粉保留度</a>
+      <a class="chip" href="/#faq">商用授权范围说明</a>
+    </div>
+  </section>
+
+  <!-- 5 深度解析 -->
+  <section class="sec" id="deep">
+    <div class="sec-head">
+      <div><span class="sec-no">05 / 深度解析</span><h2>分级照片能替代分级员吗</h2></div>
+      <p class="sub">这是全页唯一的长文阅读区，给出可以被数据推翻的判断，也列出推翻它的条件。</p>
+    </div>
+    <div class="deep">
+      <article class="prose">
+        <p class="lead">先给结论：在中早熟柑橘的果径与果皮色泽两项上，标准化拍摄的照片与人工目检的一致率能到 9 成以上；但一旦进入糖酸比、耐储性和内部缺陷，照片的参考价值迅速下降。把图片当分级依据，边界在果径与色泽，越过去就会出错。</p>
+
+        <h3>一、11月7日信丰那批货的实测记录</h3>
+        <p>安西镇一处脐橙园当天采果 240 斤，按横径分三档：6.0—6.5cm、6.5—7.0cm、7.0—7.5cm。每档随机取 20 果，先用果径尺卡量，再拍白底俯拍。事后由两名分级员对照照片重新判定，结果与实物判定一致的是 58 果，占比 96.7%。不一致的 2 果都出现在 6.5cm 那条线上，卡尺读数是 6.48 和 6.52，照片里几乎看不出差别。</p>
+        <p>颜色这一项一致性低一些。当天果皮由青转橙的过渡果有 31 个，两名分级员看照片判定“可采”的分别是 24 个和 27 个，两人彼此一致 21 个。也就是说，在临界色上，照片会放大判断分歧，而不是缩小它。</p>
+
+        <div class="pull">
+          <b>可核对判断</b>
+          果径与果面瑕疵在照片上可复核，误差落在 0.05cm 的操作误差内；果皮转色临界期与糖度不在此列。信丰批次 96.7% 的果径一致率只覆盖果径一项，不能外推到整批货的等级判定。
+        </div>
+
+        <h3>二、三个产区的等级标准前后变化</h3>
+        <p>2026 年 10 月，赣南脐橙执行的分级仍以横径为主，一级果 6.5—7.0cm。同期广西融安滑皮金桔的收购标准把果皮油胞完整度写进了验收条款，这在两年前没有。云南宾川的阳光玫瑰则把果粉保留度单独列项。三地标准差异说明，外观照片能做的事，取决于当地把哪一项写进了文本。</p>
+        <table>
+          <caption>三个产区收购验收条款对照（2026 年 10—11 月）</caption>
+          <thead><tr><th>产区与品种</th><th>写进条款的外观项</th><th>照片可核对性</th></tr></thead>
+          <tbody>
+            <tr><td>江西信丰 · 脐橙</td><td>横径、果面机械伤</td><td>高，卡尺与图并置即可</td></tr>
+            <tr><td>广西融安 · 滑皮金桔</td><td>油胞完整度、果皮厚度</td><td>中，近景可看油胞，厚度需切面</td></tr>
+            <tr><td>云南宾川 · 阳光玫瑰</td><td>果粉保留度、穗形整齐</td><td>中偏低，果粉脱落受拍摄角度影响大</td></tr>
+          </tbody>
+        </table>
+
+        <h3>三、争议点：果粉该不该算扣分项</h3>
+        <p>转述两种说法。一种来自收货商：果粉脱落多，说明装卸次数多，可以当损耗指标。另一种来自种植端：果粉在运输中本来就会蹭掉，用果粉判断新鲜度没有依据。事实层面能确认的是，阳光玫瑰采后 6 小时与 48 小时各拍一组，同串果粒的果粉覆盖率肉眼可见下降，但果肉硬度在同一区间。这支持种植端的说法，即果粉脱落不等于品质下降。</p>
+        <p>推测部分要单独标出来：如果收购方把果粉写进合同，那它会变成事实上的扣价项，无论是否符合品质逻辑。规则一旦落地，照片就从参考变成了证据。这一点在 10 月的两份收购单上能看到影子，其中一份把果粉列在备注栏，另一份没有。</p>
+
+        <h3>四、把判断拆成可核对的四条</h3>
+        <ul class="checklist">
+          <li><span>果径档位</span><b>对照</b><span>卡尺读数与照片同框，误差 ±0.05cm 内算一致</span></li>
+          <li><span>果面机械伤</span><b>对照</b><span>伤斑面积占果面 1% 以上应可识别</span></li>
+          <li><span>果皮转色</span><b>存疑</b><span>临界色需两人以上独立判定，记录分歧数</span></li>
+          <li><span>糖度与耐储性</span><b>不可</b><span>须折光仪与冷库实测，照片不参与</span></li>
+        </ul>
+        <p>反过来说，如果哪天产区把糖度检测结果直接印在果箱标签上并随货拍摄，照片的证据能力会往上走一格。目前 68 个合作果园中，只有 11 个愿意在拍摄时同步提供糖度读数，这也是图库内数值覆盖不完整的原因。</p>
+      </article>
+      <aside class="deep-side">
+        <div class="side-card">
+          <h3>本文目录</h3>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#deep">信丰实测记录</a></li>
+            <li><a href="/#deep">三产区标准变化</a></li>
+            <li><a href="/#deep">果粉争议</a></li>
+            <li><a href="/#deep">四条核对清单</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>数据口径</h3>
+          <p style="font-size:var(--fs-xs);color:var(--ink-soft);margin:0">果径用数显卡尺，单果测横径两次取均值；糖度用折光仪，同果取三处读数。拍摄光源为 5500K 常亮灯，白平衡固定。</p>
+        </div>
+        <div class="side-card">
+          <h3>相关条目</h3>
+          <div class="tagline">
+            <a class="chip" href="/#picked">信丰脐橙 168 张</a>
+            <a class="chip" href="/#latest">融安金桔 31 张</a>
+            <a class="chip" href="/#channels">宾川阳光玫瑰</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 6 体验指南 -->
+  <section class="sec" id="guide">
+    <div class="sec-head">
+      <div><span class="sec-no">06 / 拍摄与选图指南</span><h2>从检索到下载的四步</h2></div>
+      <p class="sub">按用途选图比按好看选图更省事，四步走完基本不会选错。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>先定用途</h3>
+        <p>电商主图要白底、果形端正；撰稿配图可用果园场景；包装设计需要干净色块与大面积果皮。</p>
+      </div>
+      <div class="step">
+        <h3>用具体名字检索</h3>
+        <p>输入“赣南脐橙”比输入“橙子”准。检索支持产区加品种，例如“信丰 脐橙”。</p>
+      </div>
+      <div class="step">
+        <h3>核对元数据</h3>
+        <p>看拍摄日期、果径区间、糖度读数三项。缺项的批次会在条目上标注“元数据不完整”。</p>
+      </div>
+      <div class="step">
+        <h3>确认授权范围</h3>
+        <p>单张登记，商用与非商用分列。含人物肖像的场景图需另附肖像授权，页尾有示例说明。</p>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:var(--sp-4)">
+      <article class="card">
+        <h3>什么图适合做详情页主图</h3>
+        <p>果形端正、背景纯白、无人物、无手部入镜。果径尺可以不进画面，但条目里必须能查到读数。信丰那批一级果白底图共 84 张，符合主图条件的 61 张。</p>
+      </article>
+      <article class="card">
+        <h3>什么图不适合直接投放</h3>
+        <p>带果园杂物的场景图容易在缩略图里显得脏；果粉重的阳光玫瑰在深色背景下会失掉层次。这不是照片质量问题，是背景选择问题。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7 用户评论 -->
+  <section class="sec" id="reviews">
+    <div class="sec-head">
+      <div><span class="sec-no">07 / 用户评论</span><h2>使用者的真实反馈</h2></div>
+      <p class="sub">评论来自注册用户的公开留言，保留原话，未做润色。</p>
+    </div>
+    <div class="rating-sum">
+      <div><b>4.2</b><small>综合评分 / 5</small></div>
+      <div><span class="stars" aria-hidden="true">★★★★☆</span><small>共 386 条评价</small></div>
+      <div><small>图片信息完整 4.6 · 检索准确 4.3 · 授权说明 3.9</small></div>
+    </div>
+    <div class="reviews">
+      <article class="review">
+        <blockquote>做生鲜详情页找了三年橙子图，第一次见到把果径尺一起拍进去的。信丰那批 6.5cm 和 7.5cm 两组摆在一起，客户当场就定了规格。</blockquote>
+        <div class="who"><span class="avatar">陈</span><span>陈姓用户 · 电商美工</span><span class="stars">★★★★★</span></div>
+      </article>
+      <article class="review">
+        <blockquote>融安金桔的油胞近景拍得确实细，但滑皮和普通金桔如果不在同一张里，我还是分不太出来。建议对照图再明确一点。</blockquote>
+        <div class="who"><span class="avatar">林</span><span>林姓用户 · 水果店采购</span><span class="stars">★★★★☆</span></div>
+      </article>
+      <article class="review">
+        <blockquote>鸭梨果锈那组只有 18 张，三种套袋状态各 6 张，作为包装设计参考够用，写稿就不太够。想要更多未套袋的样本。</blockquote>
+        <div class="who"><span class="avatar">周</span><span>周姓用户 · 内容编辑</span><span class="stars">★★★☆☆</span></div>
+      </article>
+      <article class="review">
+        <blockquote>阳光玫瑰采后 48 小时那组，果粉看着掉了不少，但硬度没变，这个信息很实用。之前一直以为果粉掉了就是不新鲜。</blockquote>
+        <div class="who"><span class="avatar">吴</span><span>吴姓用户 · 果园技术员</span><span class="stars">★★★★★</span></div>
+      </article>
+      <article class="review">
+        <blockquote>授权说明写得偏绕。单张登记到底是一次性买断还是一年内使用，翻了两遍才看懂。希望条款页直接给一句白话总结。</blockquote>
+        <div class="who"><span class="avatar">赵</span><span>赵姓用户 · 独立设计师</span><span class="stars">★★★☆☆</span></div>
+      </article>
+      <article class="review">
+        <blockquote>红富士条红和片红对比那 44 张很值。同一冷库两批货放在一起拍，色差一目了然，比看十篇文字描述管用。</blockquote>
+        <div class="who"><span class="avatar">孙</span><span>孙姓用户 · 商超采购</span><span class="stars">★★★★★</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 8 相关资讯 -->
+  <section class="sec" id="news">
+    <div class="sec-head">
+      <div><span class="sec-no">08 / 相关资讯</span><h2>产季与规则动态</h2></div>
+      <p class="sub">只记录可核对的时间与条款变化，行业判断另见深度解析。</p>
+    </div>
+    <ul class="list">
+      <li><span class="date">11-06</span><span class="t"><b>赣南脐橙开摘日定在 11 月 6 日</b><span>信丰、安远两县同步开摘，早采果糖度低于 10.5 的不进入一级果收购。</span></span><span class="badge">产区</span></li>
+      <li><span class="date">11-04</span><span class="t"><b>融安滑皮金桔收购单新增油胞条款</b><span>两份收购单中一份把油胞完整度列入备注栏，收购价按每斤 0.3 元分档。</span></span><span class="badge">规则</span></li>
+      <li><span class="date">10-31</span><span class="t"><b>宾川阳光玫瑰进入尾期</b><span>冷棚果基本收完，尾期货果粉覆盖率下降，收购方以穗重 600 克为界分级。</span></span><span class="badge">产区</span></li>
+      <li><span class="date">10-27</span><span class="t"><b>烟台红富士入库进度过半</b><span>冷库温度设定 0—1℃，条红品种比片红更耐存，出库色差需提前标注。</span></span><span class="badge">仓储</span></li>
+      <li><span class="date">10-22</span><span class="t"><b>丹东红颜头茬果上市</b><span>暖棚头茬与二茬果重差约 4 克，图库已补拍两组对照。</span></span><span class="badge">上市</span></li>
+    </ul>
+  </section>
+
+  <!-- 9 相关推荐 -->
+  <section class="sec" id="reco">
+    <div class="sec-head">
+      <div><span class="sec-no">09 / 相关推荐</span><h2>常被一起查的条目</h2></div>
+      <p class="sub">按检索共现次数排序，标签直接点击进入对应频道。</p>
+    </div>
+    <div class="reco">
+      <a href="/#channels">赣南脐橙果径分级</a>
+      <a href="/#picked">红颜草莓头茬与二茬</a>
+      <a href="/#deep">金桔油胞密度对照</a>
+      <a href="/#latest">红富士条红片红色差</a>
+      <a href="/#guide">鸭梨果锈与套袋关系</a>
+      <a href="/#channels">阳光玫瑰穗形整齐度</a>
+      <a href="/#deep">软籽石榴籽粒色泽</a>
+      <a href="/#guide">库尔勒香梨果梗长度</a>
+      <a href="/#news">中宁枸杞鲜果与干果</a>
+      <a href="/#reviews">商用授权单张登记</a>
+      <a href="/#deep">猕猴桃后熟软化过程</a>
+      <a href="/#picked">白糖罂荔枝龟裂片</a>
+    </div>
+  </section>
+
+  <!-- 10 时间线 -->
+  <section class="sec" id="timeline">
+    <div class="sec-head">
+      <div><span class="sec-no">10 / 拍摄时间线</span><h2>过去两周的拍摄与入库</h2></div>
+      <p class="sub">时间线只记拍摄与入库两件事，与上面的资讯动态不重合。</p>
+    </div>
+    <ol class="timeline">
+      <li><time datetime="2026-11-07">2026-11-07 · 拍摄</time><p>信丰安西镇脐橙园，上午 8:40 至 11:20，自然光加反光板，果径尺与糖度牌同框。</p></li>
+      <li><time datetime="2026-11-07">2026-11-07 · 入库</time><p>融安金桔 31 张过审，油胞近景 12 张标注为“需切面配合使用”。</p></li>
+      <li><time datetime="2026-11-05">2026-11-05 · 拍摄</time><p>丹东暖棚红颜头茬果，记录果重 32g 与 28g 两组，附电子秤读数。</p></li>
+      <li><time datetime="2026-11-03">2026-11-03 · 拍摄</time><p>烟台冷库红富士两批货，条红 24 张、片红 20 张，出库后在 30 分钟内拍完。</p></li>
+      <li><time datetime="2026-10-28">2026-10-28 · 入库</time><p>泊头鸭梨三种套袋状态，18 张，果锈面积在条目里以百分比标注。</p></li>
+    </ol>
+  </section>
+
+  <!-- 11 FAQ -->
+  <section class="sec" id="faq">
+    <div class="sec-head">
+      <div><span class="sec-no">11 / 常见问题</span><h2>检索、授权与元数据</h2></div>
+      <p class="sub">按提问频次排列，回答主语为图库条目本身。</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>赣南脐橙条目里的果径数字是怎么来的？</summary>
+        <div class="ans"><p>由拍摄人员在果园用数显卡尺单果测横径两次取均值，读数与果实同框拍照留存。入库时录入条目字段，未测的批次标为“无果径数据”，不做估算。</p></div>
+      </details>
+      <details>
+        <summary>滑皮金桔的油胞照片能判断果皮厚度吗？</summary>
+        <div class="ans"><p>不能单独判断。油胞密度可以从近景看出，果皮厚度需要横切面照片配合。图库把切面图与外观图放在同一条目下，缺切面的批次会注明“仅外观”。</p></div>
+      </details>
+      <details>
+        <summary>单张授权和整包授权有什么区别？</summary>
+        <div class="ans"><p>单张授权按一张图片登记，可用于一次商业投放；整包授权按频道打包，使用期限为一年。含人物肖像的场景图不包含在整包内，需单独申请。</p></div>
+      </details>
+      <details>
+        <summary>阳光玫瑰果粉脱落的照片怎么用才不出错？</summary>
+        <div class="ans"><p>把它当作运输过程的记录，不要当新鲜度证明。同一条目下有采后 6 小时与 48 小时两组照片，果肉硬度数据随附，两者需要一起看。</p></div>
+      </details>
+      <details>
+        <summary>鸭梨果锈面积标注的百分比如何核对？</summary>
+        <div class="ans"><p>条目内附有网格参照图，锈斑面积按网格估算。百分比为估算值，误差约 ±5%，不能作为分级判定的唯一依据。</p></div>
+      </details>
+      <details>
+        <summary>为什么有些频道的条目数比另一批少很多？</summary>
+        <div class="ans"><p>拍摄排期按成熟期走。中宁枸杞鲜果与丹东九九草莓的拍摄窗口短，合作果园也少，入库量自然低。图库不做数量补齐，缺就是缺。</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 12 创作者证言 -->
+  <section class="sec" id="voices">
+    <div class="sec-head">
+      <div><span class="sec-no">12 / 拍摄者说</span><h2>果园拍摄的三段现场记录</h2></div>
+      <p class="sub">来自参与拍摄的摄影师与果园技术员，口述整理。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <blockquote style="margin:0 0 10px;font-size:var(--fs-s);color:var(--ink-soft)">“信丰那天早上有薄雾，反光板压不住，后来改成侧逆光加白卡，果皮橙度才准。果径尺必须贴着果实拍，差半格就说不清。”</blockquote>
+        <p class="meta"><span>摄影师 · 老邓</span><span>信丰拍摄 4 年</span></p>
+      </article>
+      <article class="card">
+        <blockquote style="margin:0 0 10px;font-size:var(--fs-s);color:var(--ink-soft)">“滑皮金桔的油胞要近距离拍，手机不行，得用百微。果子不能洗，一洗油胞就看不清了，表皮那层灰是正常的。”</blockquote>
+        <p class="meta"><span>果园技术员 · 韦师傅</span><span>融安</span></p>
+      </article>
+      <article class="card">
+        <blockquote style="margin:0 0 10px;font-size:var(--fs-s);color:var(--ink-soft)">“冷库出库拍红富士，果面会起水珠，得等二十分钟回温再拍。条红的着色纹路在冷光下会发暗，白平衡要重设。”</blockquote>
+        <p class="meta"><span>摄影师 · 于工</span><span>烟台冷库跟拍</span></p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg width="34" height="34" viewBox="0 0 64 64" role="img" aria-label="果实图形标志">
+            <circle cx="32" cy="37" r="19" fill="#f2843f"/>
+            <path d="M32 20c1.6-6.4 7.4-10 14-9.2-1 7.3-6.4 11.6-14 9.2z" fill="#8cbb60"/>
+          </svg>
+          <span class="brand-name">优果网优美图库官网</span>
+        </div>
+        <p class="foot-slogan">按品种、产区与拍摄日期组织的水果实拍资料库，照片信息附果径、糖度与果面状态，供选品、撰稿与包装设计取用。</p>
+        <p style="font-size:var(--fs-xs);color:#a2968a;margin:0">示例数据说明：站内品种条目数、照片数量、果园合作数、评论与评分均为演示用示例，不构成真实统计。拍摄日期为 2026-10-22 至 2026-11-07。</p>
+      </div>
+      <div class="foot-col">
+        <h3>品种频道</h3>
+        <ul>
+          <li><a href="/#channels">赣南脐橙</a></li>
+          <li><a href="/#channels">烟台红富士</a></li>
+          <li><a href="/#channels">阳光玫瑰葡萄</a></li>
+          <li><a href="/#channels">融安滑皮金桔</a></li>
+          <li><a href="/#channels">库尔勒香梨</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#picked">编辑精选</a></li>
+          <li><a href="/#latest">最新入库</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">拍摄与选图指南</a></li>
+          <li><a href="/#news">产季资讯</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>使用与反馈</h3>
+        <ul>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#voices">拍摄者说</a></li>
+          <li><a href="/#timeline">拍摄时间线</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>页面内容更新至 2026-11-08，可核对更新项为 11 月 7 日信丰脐橙与融安金桔两批入库记录。站内授权说明、评分与联系信息均为示例，正式使用前请以书面条款为准。</p>
+      <p>© 2026 优果网优美图库官网 · 示例站点，保留所有权利。</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到页面顶部">顶部</button>
+
+<script>
+(function(){
+  /* 菜单 */
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+    });
+  }
+
+  /* 回到顶部 */
+  var top=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>520){top.classList.add('show');}else{top.classList.remove('show');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  top.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  /* 本地检索 */
+  var input=document.getElementById('q'),out=document.getElementById('searchOut');
+  var index=[
+    {t:'赣南脐橙',h:'/#channels',d:'11月开摘，果径 6.5—7.0cm 一级果'},
+    {t:'融安滑皮金桔',h:'/#latest',d:'油胞完整度与糖度 18.2 实测'},
+    {t:'烟台红富士条红与片红',h:'/#latest',d:'冷库两批货色差对照 44 张'},
+    {t:'阳光玫瑰葡萄果粉',h:'/#picked',d:'采后 6 小时与 48 小时对照'},
+    {t:'鸭梨果锈',h:'/#guide',d:'三种套袋状态各 6 张'},
+    {t:'丹东红颜草莓头茬',h:'/#news',d:'果重 32g 与 28g 两组'},
+    {t:'突尼斯软籽石榴',h:'/#channels',d:'籽粒色泽四阶段样本'},
+    {t:'库尔勒香梨果梗',h:'/#channels',d:'授粉果与自然果对照'},
+    {t:'商用授权单张登记',h:'/#faq',d:'授权范围与肖像说明'},
+    {t:'分级照片能替代分级员吗',h:'/#deep',d:'果径一致率 96.7% 的实测'},
+    {t:'拍摄时间线',h:'/#timeline',d:'10月22日至11月7日拍摄记录'},
+    {t:'用户评论',h:'/#reviews',d:'386 条评价，综合 4.2 分'}
+  ];
+  function render(kw){
+    var v=kw.trim().toLowerCase();
+    out.innerHTML='';
+    if(!v){out.classList.remove('open');return;}
+    var hits=index.filter(function(i){
+      return i.t.toLowerCase().indexOf(v)>-1||i.d.toLowerCase().indexOf(v)>-1;
+    }).slice(0,7);
+    if(!hits.length){
+      var p=document.createElement('p');
+      p.className='empty';
+      p.textContent='没有找到“'+kw+'”相关条目。可试试赣南脐橙、阳光玫瑰、滑皮金桔、授权等词。';
+      out.appendChild(p);
+    }else{
+      hits.forEach(function(i){
+        var a=document.createElement('a');
+        a.href=i.h;a.setAttribute('role','option');
+        a.innerHTML='<b>'+i.t+'</b>　<span style="color:#8a7c6e;font-size:12px">'+i.d+'</span>';
+        a.addEventListener('click',function(){out.classList.remove('open');});
+        out.appendChild(a);
+      });
+    }
+    out.classList.add('open');
+  }
+  var timer=null;
+  input.addEventListener('input',function(){
+    clearTimeout(timer);
+    var v=input.value;
+    timer=setTimeout(function(){render(v);},160);
+  });
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();render(input.value);}
+    if(e.key==='Escape'){out.classList.remove('open');}
+  });
+  document.addEventListener('click',function(e){
+    if(!out.contains(e.target)&&e.target!==input){out.classList.remove('open');}
+  });
+
+  /* 侧栏滚动高亮 */
+  var navLinks=[].slice.call(document.querySelectorAll('#sideNav a'));
+  var targets=['#deep'];
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+180;
+    var sec=document.getElementById('deep');
+    if(sec){
+      var on=y>=sec.offsetTop-40;
+      navLinks.forEach(function(a){a.classList.toggle('on',on);});
+    }
+  },{passive:true});
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"优果网优美图库官网",
+  "description":"收录水果品种实拍图与分级数据的图库站点，附拍摄日期、产区与果径糖度记录。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"赣南脐橙条目里的果径数字是怎么来的？","acceptedAnswer":{"@type":"Answer","text":"由拍摄人员在果园用数显卡尺单果测横径两次取均值，读数与果实同框拍照留存。入库时录入条目字段，未测的批次标为“无果径数据”，不做估算。"}},
+    {"@type":"Question","name":"滑皮金桔的油胞照片能判断果皮厚度吗？","acceptedAnswer":{"@type":"Answer","text":"不能单独判断。油胞密度可以从近景看出，果皮厚度需要横切面照片配合。图库把切面图与外观图放在同一条目下，缺切面的批次会注明“仅外观”。"}},
+    {"@type":"Question","name":"单张授权和整包授权有什么区别？","acceptedAnswer":{"@type":"Answer","text":"单张授权按一张图片登记，可用于一次商业投放；整包授权按频道打包，使用期限为一年。含人物肖像的场景图不包含在整包内，需单独申请。"}},
+    {"@type":"Question","name":"阳光玫瑰果粉脱落的照片怎么用才不出错？","acceptedAnswer":{"@type":"Answer","text":"把它当作运输过程的记录，不要当新鲜度证明。同一条目下有采后 6 小时与 48 小时两组照片，果肉硬度数据随附，两者需要一起看。"}},
+    {"@type":"Question","name":"鸭梨果锈面积标注的百分比如何核对？","acceptedAnswer":{"@type":"Answer","text":"条目内附有网格参照图，锈斑面积按网格估算。百分比为估算值，误差约 ±5%，不能作为分级判定的唯一依据。"}},
+    {"@type":"Question","name":"为什么有些频道的条目数比另一批少很多？","acceptedAnswer":{"@type":"Answer","text":"拍摄排期按成熟期走。中宁枸杞鲜果与丹东九九草莓的拍摄窗口短，合作果园也少，入库量自然低。图库不做数量补齐，缺就是缺。"}}
+  ]
+}
+</script>
+</body>
+                                                   </html>
