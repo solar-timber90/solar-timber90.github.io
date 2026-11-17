@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>久久艹日中文字幕-字幕组追踪与观剧指南</title>
+<meta name="description" content="久久艹日中文字幕专注整理日中双语字幕版本与发布记录，覆盖剧集、电影、纪录片字幕时间轴，含版本对比、时间轴校对方法、下载前核对清单与观众实测反馈。">
+<meta name="keywords" content="久久艹日中文字幕">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317223a'/%3E%3Crect x='12' y='30' width='40' height='6' rx='3' fill='%23f2b64c'/%3E%3Crect x='12' y='42' width='28' height='6' rx='3' fill='%23e2e8f4' opacity='.75'/%3E%3Ccircle cx='46' cy='20' r='7' fill='%2314a08c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#17223a;
+  --ink-2:#2c3a58;
+  --paper:#f7f5f0;
+  --card:#ffffff;
+  --line:#dcd7cc;
+  --main:#1a5f8a;
+  --main-dark:#123f5d;
+  --accent:#c8742a;
+  --accent-2:#14a08c;
+  --muted:#6a6f7c;
+  --radius:10px;
+  --radius-lg:16px;
+  --shadow:0 2px 10px rgba(23,34,58,.07);
+  --shadow-hover:0 8px 22px rgba(23,34,58,.12);
+  --gap:22px;
+  --font:"Noto Serif SC","Songti SC",Georgia,"Microsoft YaHei",serif;
+  --font-sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-sans);
+  font-size:16px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--main);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.35;margin:0 0 .6em}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.35em}
+.wrap{width:min(1180px,94%);margin:0 auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 吸顶区 */
+.sticky-shell{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--ink);
+  color:#e9edf6;
+  font-size:13.5px;
+  letter-spacing:.01em;
+}
+.announce .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:7px 0}
+.announce .tag{
+  background:var(--accent);
+  color:#fff;
+  border-radius:4px;
+  padding:1px 8px;
+  font-size:12px;
+  font-weight:700;
+}
+.announce a{color:#ffd9a8}
+.header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.header .wrap{display:flex;align-items:center;gap:16px;padding:11px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{display:block;flex:0 0 auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.15}
+.brand-text b{font-family:var(--font);font-size:19px;color:var(--ink);letter-spacing:.02em}
+.brand-text span{font-size:11.5px;color:var(--muted);letter-spacing:.16em}
+.nav-main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav-main a{
+  padding:6px 10px;border-radius:6px;color:var(--ink-2);font-size:14px;
+}
+.nav-main a:hover{background:#eef2f8;text-decoration:none}
+.nav-main a.active{color:var(--main-dark);font-weight:700;background:#e7eff7}
+.searchbox{position:relative;flex:0 0 auto}
+.searchbox input{
+  width:190px;padding:7px 10px 7px 32px;border:1px solid var(--line);
+  border-radius:20px;font-size:14px;background:#fbfaf7;color:var(--ink);
+  font-family:var(--font-sans);
+}
+.searchbox input:focus{outline:2px solid var(--accent-2);outline-offset:1px;border-color:transparent}
+.searchbox .ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);opacity:.5}
+.search-msg{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;
+  border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow-hover);
+  padding:10px 12px;font-size:13.5px;color:var(--ink-2);display:none;z-index:80;
+}
+.search-msg.show{display:block}
+.menu-btn{
+  display:none;border:1px solid var(--line);background:#fff;border-radius:8px;
+  padding:7px 10px;font-size:14px;color:var(--ink);cursor:pointer;
+}
+.menu-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 首屏 */
+.hero{
+  background:linear-gradient(160deg,#13203a 0%,#1b3354 55%,#1a5f8a 100%);
+  color:#eef2f9;position:relative;overflow:hidden;
+}
+.hero .wrap{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:38px;
+  padding:54px 0 58px;align-items:center;position:relative;z-index:2;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.2em;
+  color:#ffd9a8;border:1px solid rgba(255,217,168,.45);border-radius:20px;padding:3px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:.01em;margin-bottom:.35em;color:#fff}
+.hero .lead{font-size:16.5px;color:#cfd9ea;max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:8px;font-size:15px;
+  border:1px solid transparent;transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 14px rgba(200,116,42,.4)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.hero-stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:#a9b8d1}
+.hero-stats b{display:block;font-size:23px;color:#fff;font-family:var(--font)}
+.hero-art{position:relative;min-height:300px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 14px 30px rgba(0,0,0,.35))}
+
+/* 主区 */
+.main-area .wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;padding:44px 0 20px;align-items:start}
+.content-col{min-width:0}
+.side-col{display:flex;flex-direction:column;gap:var(--gap);position:sticky;top:124px}
+
+section.block{margin-bottom:46px;scroll-margin-top:118px}
+.block-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.block-head h2{font-size:23px;margin:0}
+.block-head .note{font-size:13px;color:var(--muted);font-family:var(--font-sans)}
+.block-sub{color:var(--muted);font-size:14.5px;margin:10px 0 18px}
+
+/* 卡片网格 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:18px 18px 16px;box-shadow:var(--shadow);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card h3{font-size:17px;margin-bottom:6px}
+.card .meta{font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.card p{font-size:14.2px;color:var(--ink-2);margin-bottom:0}
+.chip{
+  display:inline-block;font-size:12px;background:#eaf1f7;color:var(--main-dark);
+  border-radius:5px;padding:1px 8px;margin-right:6px;margin-bottom:4px;
+}
+.chip.accent{background:#fbedd9;color:#8a4c10}
+.chip.green{background:#e0f2ee;color:#0d6b5d}
+
+/* 媒体卡片 */
+.media-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:transform .15s ease}
+.media-card:hover{transform:translateY(-3px)}
+.media-card img{width:100%;height:150px;object-fit:cover}
+.media-card .body{padding:14px 16px 16px}
+.media-card h3{font-size:16px;margin-bottom:5px}
+.media-card p{font-size:13.8px;color:var(--ink-2);margin-bottom:8px}
+.media-card .meta{font-size:12px;color:var(--muted)}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.tight-list li{display:flex;gap:14px;padding:13px 18px;border-bottom:1px solid #eee9e0;font-size:14.5px;margin:0;align-items:baseline}
+.tight-list li:last-child{border-bottom:none}
+.tight-list time{flex:0 0 74px;font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums}
+.tight-list .txt{color:var(--ink-2)}
+.tight-list .txt b{color:var(--ink)}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:10px}
+.tag-index a{
+  background:var(--card);border:1px solid var(--line);border-radius:24px;
+  padding:6px 16px;font-size:14px;color:var(--ink-2);box-shadow:var(--shadow);
+}
+.tag-index a:hover{border-color:var(--main);color:var(--main-dark);text-decoration:none;transform:translateY(-2px)}
+.tag-index small{color:var(--muted);font-size:11.5px;margin-left:5px}
+
+/* 深度解析 */
+.deep{
+  background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
+  border-radius:var(--radius-lg);padding:26px 28px;box-shadow:var(--shadow);
+}
+.deep h3{font-size:18.5px;margin-top:26px;color:var(--main-dark)}
+.deep h3:first-of-type{margin-top:8px}
+.deep p{font-size:15.2px;color:var(--ink-2)}
+.deep .verify{
+  background:#f3f7f5;border:1px dashed #b8cfc7;border-radius:10px;padding:14px 18px;
+  margin:16px 0;font-size:14px;
+}
+.deep .verify b{color:#0d6b5d}
+.deep blockquote{
+  margin:18px 0;padding:12px 20px;border-left:3px solid var(--accent);
+  background:#fdf8f1;font-size:14.6px;color:var(--ink-2);border-radius:0 8px 8px 0;
+}
+.deep ul li{font-size:14.6px;color:var(--ink-2)}
+
+/* 步骤 */
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.steps li{
+  counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 18px 14px 56px;position:relative;font-size:14.6px;color:var(--ink-2);margin:0;
+}
+.steps li::before{
+  content:counter(s);position:absolute;left:16px;top:13px;width:26px;height:26px;
+  border-radius:50%;background:var(--main);color:#fff;font-size:13.5px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);
+}
+.steps li b{color:var(--ink)}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+.compare>div{padding:18px 20px}
+.compare .left{background:#fbf7f1;border-right:1px solid var(--line)}
+.compare .right{background:#f1f7f5}
+.compare h4{font-size:15.5px;margin-bottom:10px}
+.compare .left h4{color:#8a4c10}
+.compare .right h4{color:#0d6b5d}
+.compare ul{margin:0;padding-left:1.1em;font-size:14px;color:var(--ink-2)}
+.compare li{margin-bottom:.4em}
+
+/* FAQ */
+details.faq{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:10px;box-shadow:var(--shadow);overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:14px 18px;font-weight:700;font-size:15px;color:var(--ink);
+  list-style:none;position:relative;padding-right:44px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--accent);font-weight:400;
+}
+details.faq[open] summary::after{content:"−"}
+details.faq summary:focus-visible{outline:2px solid var(--accent-2);outline-offset:-2px}
+details.faq .ans{padding:0 18px 16px;font-size:14.5px;color:var(--ink-2);border-top:1px dashed #e6e0d5;margin-top:2px;padding-top:12px}
+
+/* 评论 */
+.comment-list{display:grid;gap:14px}
+.comment{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;box-shadow:var(--shadow)}
+.comment .who{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--ink-2);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 auto}
+.comment .who b{font-size:14px;color:var(--ink)}
+.comment .who time{font-size:12px;color:var(--muted);margin-left:auto}
+.comment p{font-size:14.2px;color:var(--ink-2);margin:0}
+.comment .ref{display:inline-block;font-size:12px;color:var(--main);background:#eaf1f7;border-radius:4px;padding:0 6px;margin-right:6px}
+.stars{color:var(--accent);font-size:12.5px;letter-spacing:1px}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid #d7dbe4}
+.timeline li{position:relative;margin-bottom:16px;font-size:14.3px;color:var(--ink-2)}
+.timeline li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent-2);border:2px solid var(--paper)}
+.timeline b{color:var(--ink);display:block;font-size:14.5px}
+.timeline time{font-size:12px;color:var(--main);margin-right:8px}
+
+/* 引语 */
+.quote-card{background:#1b3354;color:#e7edf7;border-radius:var(--radius-lg);padding:22px 24px;box-shadow:var(--shadow)}
+.quote-card p{font-size:15px;margin-bottom:12px}
+.quote-card cite{font-size:13px;color:#9fb3d1;font-style:normal}
+
+/* 侧栏 */
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px 18px;box-shadow:var(--shadow)}
+.side-card h2,.side-card h3{font-size:15.5px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #eee9e0}
+.side-nav{list-style:none;padding:0;margin:0;font-size:14px}
+.side-nav li{margin:0}
+.side-nav a{display:block;padding:6px 10px;border-radius:6px;color:var(--ink-2);border-left:3px solid transparent}
+.side-nav a:hover{background:#f1f5f9;text-decoration:none}
+.side-nav a.active{color:var(--main-dark);font-weight:700;border-left-color:var(--accent);background:#eef4fa}
+.rank-list{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank-list li{counter-increment:r;font-size:13.8px;color:var(--ink-2);padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed #ece7dd;margin:0}
+.rank-list li:last-child{border-bottom:none}
+.rank-list li::before{content:counter(r);position:absolute;left:0;top:7px;width:18px;height:18px;border-radius:4px;background:#e7eff7;color:var(--main-dark);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.side-note{font-size:12.5px;color:var(--muted);line-height:1.7}
+
+/* 页尾 */
+footer{background:var(--ink);color:#c9d3e4;margin-top:30px;font-size:14px}
+footer .wrap{padding:44px 0 22px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer h3{font-size:14.5px;color:#fff;margin-bottom:12px;letter-spacing:.05em}
+footer a{color:#c9d3e4;font-size:13.8px;display:block;padding:3px 0}
+footer a:hover{color:#ffd9a8}
+.f-brand b{font-family:var(--font);font-size:19px;color:#fff;display:block;margin-bottom:8px}
+.f-brand p{font-size:13.5px;color:#9fb0ca;line-height:1.75;margin:0}
+.f-bottom{border-top:1px solid rgba(255,255,255,.14);font-size:12.5px;color:#8b9bb5;padding:16px 0 22px}
+.f-bottom .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;padding:0;width:min(1180px,94%)}
+
+/* 回顶 */
+#toTop{
+  position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;
+  background:var(--main-dark);color:#fff;border:none;cursor:pointer;font-size:18px;
+  box-shadow:0 6px 18px rgba(18,63,93,.35);opacity:0;pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease;z-index:70;
+}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translateY(-3px)}
+#toTop:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.mobile-info{display:none}
+
+@media (max-width:1024px){
+  .main-area .wrap{grid-template-columns:minmax(0,1fr) 250px;gap:24px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  .hero .wrap{grid-template-columns:1fr;padding:40px 0 44px}
+  .hero-art{max-width:520px}
+}
+@media (max-width:800px){
+  .main-area .wrap{grid-template-columns:1fr;padding-top:30px}
+  .side-col{position:static}
+  .nav-main{display:none}
+  .menu-btn{display:inline-block;margin-left:auto}
+  .nav-main.open{
+    display:flex;position:absolute;left:0;right:0;top:100%;background:#fff;
+    flex-direction:column;padding:10px 4vw 16px;border-bottom:1px solid var(--line);
+    box-shadow:0 12px 20px rgba(23,34,58,.12);margin:0;gap:2px;
+  }
+  .header .wrap{position:relative;flex-wrap:wrap}
+  .searchbox{order:5;width:100%;margin-top:8px}
+  .searchbox input{width:100%}
+  .compare{grid-template-columns:1fr}
+  .compare .left{border-right:none;border-bottom:1px solid var(--line)}
+}
+@media (max-width:600px){
+  body{font-size:15.2px}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .tight-list li{flex-wrap:wrap;gap:4px}
+  .tight-list time{flex-basis:auto}
+  .hero-stats{gap:18px}
+  .deep{padding:20px 18px}
+  footer .wrap{grid-template-columns:1fr;gap:22px}
+  .brand-text span{display:none}
+  .announce{font-size:12.5px}
+  .block-head h2{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-shell">
+  <div class="announce" role="region" aria-label="站点更新公告">
+    <div class="wrap">
+      <span class="tag">更新</span>
+      <span>11月7日 22:40 发布《海边的约定》第6集 简体双语 v2，修正第 18 分钟时间轴错位 1.4 秒。</span>
+      <a href="/#latest">查看发布记录</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="久久艹日中文字幕 首页">
+        <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#17223a"/>
+          <rect x="12" y="30" width="40" height="6" rx="3" fill="#f2b64c"/>
+          <rect x="12" y="42" width="28" height="6" rx="3" fill="#e2e8f4" opacity=".75"/>
+          <circle cx="46" cy="20" r="7" fill="#14a08c"/>
+        </svg>
+        <span class="brand-text"><b>久久艹日中文字幕</b><span>双语字幕 · 版本追踪</span></span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navMain">栏目菜单</button>
+
+      <nav class="nav-main" id="navMain" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">观众评论</a>
+      </nav>
+
+      <div class="searchbox">
+        <svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6a6f7c" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <label class="sr-only" for="searchInput">站内搜索</label>
+        <input id="searchInput" type="search" placeholder="搜剧名 / 字幕组 / 集数" autocomplete="off">
+        <div class="search-msg" id="searchMsg" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker">日中双语字幕资料库</span>
+      <h1>久久艹日中文字幕</h1>
+      <p class="lead">把每集的双语字幕版本、发布时刻与校对记录摆在一起比对。收录 2026 年秋季档 42 部剧集的 137 个字幕版本，标注时间轴偏移、译名差异和字体兼容问题，供下载前先查清再决定。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#latest">看本周发布记录</a>
+        <a class="btn btn-ghost" href="/#guide">读校对清单</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>137</b>字幕版本存档</div>
+        <div><b>42</b>在追剧集</div>
+        <div><b>9</b>合作字幕组</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2b4a72"/>
+            <stop offset="1" stop-color="#123f5d"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="30" width="440" height="280" rx="18" fill="url(#g1)" opacity=".85"/>
+        <rect x="42" y="52" width="396" height="190" rx="10" fill="#0d1a2e"/>
+        <rect x="60" y="70" width="250" height="14" rx="7" fill="#f2b64c" opacity=".9"/>
+        <rect x="60" y="96" width="330" height="10" rx="5" fill="#cfd9ea" opacity=".45"/>
+        <rect x="60" y="118" width="300" height="10" rx="5" fill="#cfd9ea" opacity=".45"/>
+        <rect x="60" y="140" width="360" height="10" rx="5" fill="#cfd9ea" opacity=".3"/>
+        <rect x="60" y="162" width="210" height="10" rx="5" fill="#14a08c" opacity=".8"/>
+        <rect x="42" y="256" width="396" height="34" rx="8" fill="#0d1a2e"/>
+        <rect x="58" y="265" width="120" height="8" rx="4" fill="#c8742a"/>
+        <rect x="186" y="265" width="64" height="8" rx="4" fill="#14a08c" opacity=".8"/>
+        <circle cx="58" cy="273" r="0" fill="none"/>
+        <g fill="#f2b64c">
+          <rect x="368" y="60" width="52" height="26" rx="6" opacity=".95"/>
+        </g>
+        <text x="394" y="78" font-family="sans-serif" font-size="13" fill="#17223a" text-anchor="middle">v2</text>
+        <rect x="42" y="300" width="240" height="8" rx="4" fill="#9fb3d1" opacity=".4"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="main-area" id="main">
+  <div class="wrap">
+    <main class="content-col">
+
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2>领域概览：日中双语字幕的版本生态</h2>
+          <span class="note">统计口径：2026年10月8日—11月8日</span>
+        </div>
+        <p class="block-sub">一部剧集在一周内出现三四个字幕版本并不稀奇。简体、繁体、双语、时间轴修正版各有各的用途，选错版本比没有字幕更影响观看。</p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>双语对照字幕的三种排法</h3>
+            <div class="meta">字幕组观察 · 10月21日</div>
+            <p>上下并列适合手机竖屏，日文在上中文在下的排版在 1080p 屏幕上占去约 1/6 画面；左右分栏更适合大屏；第三种是日文小字置于中文右下角，看剧不干扰但查词费眼。</p>
+          </article>
+          <article class="card">
+            <h3>时间轴偏移从哪来</h3>
+            <div class="meta">技术条目 · 10月30日</div>
+            <p>片源帧率 23.976 与 24 之间的换算若按整数处理，40 分钟正片累积偏差可到 0.9 秒。多数 v2 版本修正的就是这类换算误差，而非翻译错误。</p>
+          </article>
+          <article class="card">
+            <h3>译名不统一的连锁反应</h3>
+            <div class="meta">术语讨论 · 11月2日</div>
+            <p>同一部《京都迷路指南》里，主人公姓氏在三个版本中分别译作“敷岛”“迹岛”“志岛”。搜索剧情时用错译名，评论区讨论常常对不上人。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="picks">
+        <div class="block-head">
+          <h2>精选内容推荐</h2>
+          <span class="note">按校对完成度排序</span>
+        </div>
+        <p class="block-sub">下面四部是本月校对记录最完整的条目，每个版本都附有修改说明，适合拿来比对双语字幕的排版差异。</p>
+        <div class="grid-2">
+          <article class="media-card">
+            <img src="https://picsum.photos/seed/subsea-conv/640/360" width="640" height="360" loading="lazy" alt="《海边的约定》第6集双语字幕截帧画面" style="object-fit:cover">
+            <div class="body">
+              <h3>《海边的约定》第6集 简体双语 v2</h3>
+              <p>11月7日发布。修正第18分钟“潮汐表”台词时间轴，另将“防波堤”从“堤坝”改回原文用词。校对签字：三条。</p>
+              <div class="meta">双语 / 1080p / 45分12秒</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <img src="https://picsum.photos/seed/kyoto-lost/640/360" width="640" height="360" loading="lazy" alt="《京都迷路指南》第五话巷弄场景双语字幕画面" style="object-fit:cover">
+            <div class="body">
+              <h3>《京都迷路指南》第五话 繁体双语</h3>
+              <p>11月3日发布。保留了关西方言的双语注释，括号内补注“おおきに”的地域用法，适合学关西腔的人对照。</p>
+              <div class="meta">繁体 / 双语注释 / 28分40秒</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <img src="https://picsum.photos/seed/ramen-diaries/640/360" width="640" height="360" loading="lazy" alt="纪录片《一碗拉面的迁徙》面汤特写字幕画面" style="object-fit:cover">
+            <div class="body">
+              <h3>纪录片《一碗拉面的迁徙》 日中双轨</h3>
+              <p>10月26日发布。厨师访谈段落采用日文原声加中文意译，食材名保留片假名并以括号加注汉字，专业词密度全月最高。</p>
+              <div class="meta">纪录片 / 双轨 / 52分04秒</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <img src="https://picsum.photos/seed/night-train/640/360" width="640" height="360" loading="lazy" alt="《夜行列车》第三集车厢对话字幕画面" style="object-fit:cover">
+            <div class="body">
+              <h3>《夜行列车》第三集 简体双语 校对版</h3>
+              <p>10月29日发布。列车广播段落按车厢编号分层排版，站名表附读音，字幕组承认“急行”与“特急”的区分在初版里搞混了。</p>
+              <div class="meta">简体 / 分层排版 / 39分28秒</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="latest">
+        <div class="block-head">
+          <h2>最新更新</h2>
+          <span class="note">11月1日—11月8日</span>
+        </div>
+        <p class="block-sub">只记录有版本变更的条目。首次发布、时间轴修正、译名改动会分开标注。</p>
+        <ul class="tight-list">
+          <li><time>11月7日</time><span class="txt"><b>《海边的约定》第6集 v2</b> · 时间轴修正，偏移量 −1.4 秒</span></li>
+          <li><time>11月6日</time><span class="txt"><b>《深夜食堂番外》第2话</b> · 首次发布，简体双语</span></li>
+          <li><time>11月5日</time><span class="txt"><b>《山手线物语》第9集</b> · 译名统一，将“改札口”从“检票口”改为“闸机口”</span></li>
+          <li><time>11月3日</time><span class="txt"><b>《京都迷路指南》第五话</b> · 繁体双语首发，补方言注释 14 处</span></li>
+          <li><time>11月2日</time><span class="txt"><b>《夜行列车》第三集</b> · 校对版，修正“急行/特急”误译</span></li>
+          <li><time>10月30日</time><span class="txt"><b>《海边的约定》第5集</b> · 简体双语首发，时长 44分56秒</span></li>
+          <li><time>10月28日</time><span class="txt"><b>《晨间厨房》第41集</b> · 字体兼容修复，避免繁体字缺字显示为方块</span></li>
+        </ul>
+      </section>
+
+      <section class="block" id="channels">
+        <div class="block-head">
+          <h2>分类入口</h2>
+          <span class="note">点进去按条目筛选</span>
+        </div>
+        <p class="block-sub">按体裁、语言习惯和用途三条线分类。每个分类下的条目数标在后面。</p>
+        <div class="tag-index">
+          <a href="/#picks">连续剧双语字幕<small>58</small></a>
+          <a href="/#picks">日本电影字幕<small>31</small></a>
+          <a href="/#picks">纪录片日中对译<small>19</small></a>
+          <a href="/#picks">关西方言注释<small>12</small></a>
+          <a href="/#picks">时间轴修正版<small>23</small></a>
+          <a href="/#picks">简繁双版本<small>16</small></a>
+          <a href="/#guide">字幕字体兼容<small>9</small></a>
+          <a href="/#picks">动画双语字幕<small>27</small></a>
+          <a href="/#guide">字幕校对流程<small>7</small></a>
+          <a href="/#latest">新番速递<small>18</small></a>
+        </div>
+      </section>
+
+      <section class="block" id="deep">
+        <div class="block-head">
+          <h2>深度解析</h2>
+          <span class="note">全页唯一长文</span>
+        </div>
+        <article class="deep">
+          <p>字幕质量的高低，很难用一句“做得好”概括。把 10 月以来的 137 个版本按“可核对项”拆开后，有一个判断值得摆出来：<b>时间轴准确度比翻译准确度更容易影响观看体验，也更容易被量化。</b></p>
+          <p>翻译的得失往往见仁见智，时间轴错位却是硬伤——差 1 秒，台词和人脸就对不上。下面把三个可核对的中段摊开。</p>
+
+          <h3>案例一：第18分钟“潮汐表”为什么晚了 1.4 秒</h3>
+          <p>11月7日发布的《海边的约定》第6集 v2，修改说明写明修正了第18分钟的时间轴。对比 v1 与 v2 的字幕文件后发现：v1 在第 17分58秒至 18分12秒的一段共计 6 行字幕，整体晚了 1.4 秒。</p>
+          <p>原因写在字幕组的说明里：v1 用的是 23.976 帧的片源，剪辑到这一段时插入了一个 12 帧的静帧，导出字幕时未把静帧时长计入。v2 补齐后整段前移。这条记录可查：发布说明中列出“静帧 12 帧，约 0.5 秒，其余偏差来自四舍五入累积”。</p>
+
+          <h3>案例二：同集两个版本的字体差异对照</h3>
+          <p>《京都迷路指南》第五话的繁体双语版，发布后有人在评论里反馈“某些字显示成方块”。核对后发现，字幕组使用了繁体字体，但未内嵌字体文件，播放器缺字时回退到默认字体。</p>
+          <div class="verify">
+            <b>可核对三栏：</b><br>
+            ① 版本：繁体双语 1103 版；② 环境：Windows 播放器默认字体“微软雅黑”；③ 结果：第 4 分 22 秒“跡”字显示为 □。修复版本于 11月4日补发，文件大小从 38KB 增至 412KB，内嵌字体子集。
+          </div>
+          <p>这里能拆出一个判断：<b>双语字幕的文件体积并非越小越好。</b>只带外挂字体名不带字体文件，碰上缺字就会露出方块——体积省下的几百 KB，换来的是观众自己去装字体的麻烦。</p>
+
+          <h3>说法差异：字幕组称“机翻辅助”，观众不信</h3>
+          <p>《夜行列车》第三集校对版说明里写着“初版部分台词借助机器翻译初稿，后经人工逐行修订”。评论区有人回帖：“看初版第 12 分钟就知道没全改。”核对第 12 分钟原句“この電車は各駅に停まります”初版译作“这辆车每站都停”，校对版改为“本列车各站停车”——意思没错，语气从此前的口语改成广播腔。差别确实存在，但和“机翻未改”不是一回事。</p>
+          <blockquote>转述与推测要分开：字幕组的原话是“借助机器翻译初稿”；观众的判断是“初版质量不行”；至于为何修订，说明里只写了“按广播语境统一”，没有更多解释。三句话的信息层不一样，不能混着引用。</blockquote>
+
+          <h3>可核对的校对清单长什么样</h3>
+          <p>把判断拆成能打勾的项，比空谈“用心校对”有用。10月29日《夜行列车》校对版附带的清单里有这些条目，逐条都能在字幕文件里验证：</p>
+          <ul>
+            <li>站名是否带读音：该版 17 个站名中 15 个附了平假名读音，缺“新宿”“池袋”两处；</li>
+            <li>车厢广播与人物对话是否分色：广播用黄字，对话用白字，共 9 处广播全部标黄；</li>
+            <li>时间轴最大偏移：全文抽样 30 行，最大偏移 0.3 秒，出现在第 27 分钟；</li>
+            <li>译名一致性：主角姓氏全文出现 22 次，无变体。</li>
+          </ul>
+          <p>这份清单能反驳前文判断的一半：时间轴不是唯一硬指标。第 27 分钟那 0.3 秒偏移没人提，反倒是站名缺读音被点了三次。所以更准确的说法是——<b>时间轴出错有明确的修改路径，译名与注释的疏漏却要靠观众逐个发现。</b></p>
+
+          <h3>规则前后变化：从“外挂”到“内嵌”</h3>
+          <p>10月上旬之前，多数版本提供的是外挂 .ass 文件，方便观众调字体大小。10月18日之后，《晨间厨房》等多个条目改为内嵌字幕轨。原因写在公告里：某播放器更新后不再识别外挂字体的行距设置，双语上下两行重叠。<b>字体兼容问题的解法从“调播放器”变成“换封装方式”，这是本月最实际的一次规则转向。</b></p>
+          <p>代价也明显：内嵌之后，想只显示中文不显示日文就做不到了。这一点在 10月28日的更新说明里被承认，字幕组给出的替代方案是“另发纯中文轨”，而当时只补了 3 集，其余 8 集没有。</p>
+        </article>
+      </section>
+
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2>体验指南：下载前先核对这五步</h2>
+          <span class="note">按顺序做完再开播</span>
+        </div>
+        <p class="block-sub">不论用哪个版本，下面五步能在三分钟内筛掉大部分问题版本。步骤来自 11月6日整理的一份校对记录。</p>
+        <ol class="steps">
+          <li><b>看发布说明的日期与版本号。</b>同一集出现 v2、v3 时，先读修改说明再看正文，能避开初版已知问题。</li>
+          <li><b>核对片源帧率。</b>说明里写 23.976 还是 24，与手里的视频一致再加载，否则全片会匀速偏移。</li>
+          <li><b>抽第 10 分钟和第 30 分钟各一行。</b>这两处常是转场或广告切口，时间轴若错位多在此处累积。</li>
+          <li><b>检查缺字体方块。</b>双语版尤其注意日文假名和繁体的异体字，播放时留意显示为 □ 或 ? 的位置。</li>
+          <li><b>看译名是否统一。</b>人名、地名、专有名词在同一集里出现两种写法，说明校对未过第二遍。</li>
+        </ol>
+      </section>
+
+      <section class="block" id="compare">
+        <div class="block-head">
+          <h2>外挂字幕与内嵌字幕怎么选</h2>
+          <span class="note">按播放环境判断</span>
+        </div>
+        <p class="block-sub">同一集的两个封装方式，适用场景完全不同。对照着看比听人推荐靠谱。</p>
+        <div class="compare">
+          <div class="left">
+            <h4>外挂 .ass / .srt</h4>
+            <ul>
+              <li>可调字号、行距、双语上下顺序</li>
+              <li>换播放器可能丢字体设置</li>
+              <li>11月后部分播放器出现行距重叠</li>
+              <li>文件小，38KB 级别</li>
+              <li>适合电脑端、能折腾播放器的人</li>
+            </ul>
+          </div>
+          <div class="right">
+            <h4>内嵌字幕轨</h4>
+            <ul>
+              <li>开箱即用，字体已嵌入</li>
+              <li>不能单独关闭日文或中文轨</li>
+              <li>11月4日修复版体积增至 412KB</li>
+              <li>手机、电视盒子兼容性好</li>
+              <li>适合投屏、移动端观剧</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="timeline">
+        <div class="block-head">
+          <h2>本月字幕版本时间线</h2>
+          <span class="note">仅列有明确版本变更的节点</span>
+        </div>
+        <ul class="timeline">
+          <li><time>10月18日</time><b>外挂改内嵌的分界点</b>《晨间厨房》起改为内嵌字幕轨，应对播放器行距设置失效。</li>
+          <li><time>10月26日</time><b>纪录片双轨首发</b>《一碗拉面的迁徙》厨师访谈段保留日文原声，食材名以片假名加注汉字。</li>
+          <li><time>10月29日</time><b>校对清单首次公开</b>《夜行列车》第三集附 17 项校对条目，站名读音缺 2 处被观众指出。</li>
+          <li><time>11月3日</time><b>方言注释补强</b>《京都迷路指南》繁体版补 14 处关西方言注释。</li>
+          <li><time>11月7日</time><b>静帧导致的偏移被修正</b>《海边的约定》第6集 v2 前移整段 1.4 秒。</li>
+        </ul>
+      </section>
+
+      <section class="block" id="faq">
+        <div class="block-head">
+          <h2>常见问题</h2>
+          <span class="note">来自留言与评论整理</span>
+        </div>
+        <details class="faq">
+          <summary>双语字幕里日文行和中文行错位，是片源问题还是字幕问题？</summary>
+          <div class="ans">多数是字幕文件的行距设置与播放器默认样式冲突。10月18日之后的版本倾向内嵌字幕轨来避免这点。若用外挂，可先统一播放器字体为“微软雅黑”再试，仍错位则查发布说明是否提到行距修正。</div>
+        </details>
+        <details class="faq">
+          <summary>《夜行列车》第三集的“急行”和“特急”到底怎么区分？</summary>
+          <div class="ans">在日本铁路语境里，急行停靠站多于特急，特急通常需另加特急料金。初版把第 12 分钟一句广播的“特急”译成了“急行”，校对版改回“特急”。看剧时若发现字幕写“急行”但画面是红色特急车头，说明用的是初版。</div>
+        </details>
+        <details class="faq">
+          <summary>为什么繁体双语版体积从 38KB 涨到 412KB？</summary>
+          <div class="ans">11月4日的修复版内嵌了字体子集，解决“跡”“邊”等字显示为方块的问题。字体子集只包含片中实际用到的字，所以并非整套字体，体积仍小于完整字库。</div>
+        </details>
+        <details class="faq">
+          <summary>关西方言注释有必要吗，还是看懂剧情就够了？</summary>
+          <div class="ans">如果只是追剧情，不看注释也不影响。但《京都迷路指南》第五话里“おおきに”出现 6 次，其中一次是店主对主角说的告别语，语气差异影响人物关系判断，这时候注释有用。</div>
+        </details>
+        <details class="faq">
+          <summary>同一集有 v1 和 v2，旧版还留着吗？</summary>
+          <div class="ans">存档里保留 v1 供比对，但不推荐观看。修改说明能告诉观众 v1 已知哪些问题，比如《海边的约定》第6集 v1 的时间轴偏移，是用来判断其他版本是否同源的参照。</div>
+        </details>
+        <details class="faq">
+          <summary>手机投屏时字幕太小怎么办？</summary>
+          <div class="ans">内嵌字幕轨的字号固定，投屏后若觉得小，只能改用外挂版本在播放器里放大。这是内嵌方案的一个代价，10月28日的公告里也承认了。</div>
+        </details>
+      </section>
+
+      <section class="block" id="comments">
+        <div class="block-head">
+          <h2>观众评论</h2>
+          <span class="note">含中性反馈与批评</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment">
+            <div class="who"><span class="avatar">林</span><b>林间小路</b><span class="stars">★★★★★</span><time>11月7日</time></div>
+            <p><span class="ref">《海边的约定》第6集 v2</span>第18分钟那段终于对上了，之前 v1 里人物张嘴半秒才出字，看得别扭。静帧这个解释也算说清楚了。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">K</span><b>Kiyo_2026</b><span class="stars">★★★☆☆</span><time>11月6日</time></div>
+            <p>《京都迷路指南》繁体版的方块字我碰上了，在 4分22秒。修复版出来之前只能换播放器。方言注释做得不错，这点得承认。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">老</span><b>老周看片</b><span class="stars">★★☆☆☆</span><time>11月5日</time></div>
+            <p>《夜行列车》初版的“急行/特急”混了，第12分钟那句广播听着就不对。校对版改了，但初版还挂在那，新来的人容易下错。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">阿</span><b>阿久</b><span class="stars">★★★★☆</span><time>11月4日</time></div>
+            <p>内嵌字幕轨在电视盒子上确实省事，不用折腾字体。就是只想要中文轨的时候没得选，《晨间厨房》只补了3集纯中文轨，剩下8集还是双语全显。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">青</span><b>青苔与铁轨</b><span class="stars">★★★★☆</span><time>11月3日</time></div>
+            <p>《一碗拉面的迁徙》里食材名用片假名加注汉字这个处理挺舒服，比直接音译好懂。52分钟的片子里专有名词不少，看得下去。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">N</span><b>Nao</b><span class="stars">★★★☆☆</span><time>11月2日</time></div>
+            <p>校对清单公开是好事，但 17 项里站名读音缺了“新宿”和“池袋”，这两个大站反而漏了，有点意外。清单本身值得推广。</p>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">河</span><b>河边散步</b><span class="stars">★★★★★</span><time>11月1日</time></div>
+            <p>《山手线物语》第9集把“改札口”统一成“闸机口”之后，前面几集的“检票口”就显得不一致了，不知道会不会回头改。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="news">
+        <div class="block-head">
+          <h2>相关资讯</h2>
+          <span class="note">字幕生态周边的动向</span>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>播放器更新导致外挂字体行距失效</h3>
+            <div class="meta">10月20日</div>
+            <p>某主流桌面播放器新版将 .ass 行距设置重置为默认值，双语上下两行由此重叠。多个字幕组从 10月18日起转向内嵌字幕轨，《晨间厨房》是最早改的那批。</p>
+          </article>
+          <article class="card">
+            <h3>秋季档新番双语字幕需求上升</h3>
+            <div class="meta">10月24日</div>
+            <p>本季 42 部在追剧集中有 27 部提供双语版，比夏季档多出 6 部。动画类双语比例最高，连续剧仍以单语简体为主，纪录片则几乎全部双轨。</p>
+          </article>
+          <article class="card">
+            <h3>字幕组公开校对清单的做法被借鉴</h3>
+            <div class="meta">11月1日</div>
+            <p>《夜行列车》附校对清单后，至少两个字幕组在后续发布中附上逐项说明。《京都迷路指南》第五话的方言注释计数即沿用这一格式。</p>
+          </article>
+          <article class="card">
+            <h3>帧率换算工具在字幕组间普及</h3>
+            <div class="meta">10月31日</div>
+            <p>静帧导致的偏移如果靠肉眼调，往往要改三四遍。10月下旬起，几个组统一用帧率换算表先算累积误差，再逐段微调。《海边的约定》v2 即按此法修复。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="recommend">
+        <div class="block-head">
+          <h2>相关推荐</h2>
+          <span class="note">按用途串起来看</span>
+        </div>
+        <div class="tag-index">
+          <a href="/#deep">双语字幕时间轴校对方法</a>
+          <a href="/#guide">字幕字体缺字排查步骤</a>
+          <a href="/#picks">关西方言双语注释条目</a>
+          <a href="/#compare">外挂与内嵌字幕选择对照</a>
+          <a href="/#deep">字幕版本 v1 到 v2 的修改记录</a>
+          <a href="/#faq">日中双语字幕排版差异问答</a>
+          <a href="/#latest">本周字幕发布记录汇总</a>
+          <a href="/#timeline">10月字幕封装方式变化时间线</a>
+        </div>
+      </section>
+
+      <section class="block" id="voice">
+        <div class="block-head">
+          <h2>字幕组校对者的话</h2>
+          <span class="note">11月6日访谈摘录</span>
+        </div>
+        <div class="quote-card">
+          <p>“最难的不是翻译，是把方言注释做到不打断节奏。《京都迷路指南》第五话 14 处注释，每一处都在想能不能挪到画面空白处。最后有 3 处只能放在台词下面，观众嫌挤也没办法。”</p>
+          <cite>—— 某字幕组校对，负责关西方言条目，入行两年四个月</cite>
+        </div>
+        <div class="quote-card" style="margin-top:14px">
+          <p>“静帧偏移那次我们内部复盘了三遍。12 帧听着不多，摊到 40 分钟的正片里就是 0.5 秒，加上四舍五入累积到 1.4 秒。以后导出前先把整片的静帧位置列一遍。”</p>
+          <cite>——“三条”，《海边的约定》第6集 v2 校对签字者</cite>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="side-col" aria-label="侧栏">
+      <div class="side-card">
+        <h3>栏内导航</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#channels">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#compare">外挂与内嵌对照</a></li>
+          <li><a href="/#timeline">版本时间线</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>本月校对完成度排行</h3>
+        <ol class="rank-list">
+          <li>《夜行列车》第三集 校对版</li>
+          <li>《海边的约定》第6集 v2</li>
+          <li>《京都迷路指南》第五话</li>
+          <li>《一碗拉面的迁徙》双轨</li>
+          <li>《山手线物语》第9集</li>
+          <li>《晨间厨房》第41集</li>
+        </ol>
+        <p class="side-note" style="margin-top:10px">排序依据：修改说明条目数、公开校对项数量、修复响应时间。仅供参考，不代表翻译质量评价。</p>
+      </div>
+
+      <div class="side-card">
+        <h3>下载前提醒</h3>
+        <p class="side-note">先看发布说明的版本号与日期；对双语排版敏感的建议用内嵌轨；繁体和方言条目留意字体缺口。示例条目中的版本号为演示数据，实际使用以各字幕组公告为准。</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <b>久久艹日中文字幕</b>
+      <p>记录每个双语字幕版本的发布时刻、已知问题与修正结果，让观众在下片前先看清版本差异。</p>
+    </div>
+    <div>
+      <h3>内容栏目</h3>
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#deep">深度解析</a>
+    </div>
+    <div>
+      <h3>使用帮助</h3>
+      <a href="/#guide">体验指南</a>
+      <a href="/#compare">外挂与内嵌对照</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#timeline">版本时间线</a>
+    </div>
+    <div>
+      <h3>互动与推荐</h3>
+      <a href="/#comments">观众评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#voice">校对者的话</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="wrap">
+      <span>页面内条目、版本号、评论均为示例数据，用于说明版本追踪的呈现方式。</span>
+      <span>内容更新时间：2026年11月8日 · 对应更新项：《海边的约定》第6集 v2 与本周发布记录</span>
+      <span>© 2026 久久艹日中文字幕</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到页面顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var navMain=document.getElementById('navMain');
+  menuBtn.addEventListener('click',function(){
+    var open=navMain.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.textContent=open?'收起菜单':'栏目菜单';
+  });
+  navMain.addEventListener('click',function(e){
+    if(e.target.tagName==='A' && window.innerWidth<=800){
+      navMain.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.textContent='栏目菜单';
+    }
+  });
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){toTop.classList.add('show');}
+    else{toTop.classList.remove('show');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections=sideLinks.map(function(a){
+    var id=a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function highlight(){
+    var pos=window.scrollY+140;
+    var current=null;
+    sections.forEach(function(sec){
+      if(sec.offsetTop<=pos){current=sec.id;}
+    });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('active',a.getAttribute('href')==='/#'+current);
+    });
+  }
+  window.addEventListener('scroll',highlight,{passive:true});
+  highlight();
+
+  var input=document.getElementById('searchInput');
+  var msg=document.getElementById('searchMsg');
+  var index=[];
+  document.querySelectorAll('h2,h3,summary,.tight-list li,.card p,.comment p,.timeline li').forEach(function(el){
+    var t=(el.textContent||'').replace(/\s+/g,' ').trim();
+    if(t.length>4){index.push({text:t,el:el});}
+  });
+
+  function hideMsg(){msg.classList.remove('show');}
+  input.addEventListener('input',function(){
+    var q=input.value.trim().toLowerCase();
+    if(!q){hideMsg();return;}
+    var hits=index.filter(function(item){return item.text.toLowerCase().indexOf(q)>-1;});
+    if(hits.length===0){
+      msg.textContent='没有找到与“'+input.value.trim()+'”相关的条目，试试剧名、字幕组名或集数。';
+      msg.classList.add('show');
+    }else{
+      msg.textContent='找到 '+hits.length+' 处相关条目，第一处：'+hits[0].text.slice(0,40)+'…';
+      msg.classList.add('show');
+    }
+  });
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      var q=input.value.trim().toLowerCase();
+      if(!q)return;
+      var hit=index.filter(function(item){return item.text.toLowerCase().indexOf(q)>-1;})[0];
+      if(hit){
+        hit.el.scrollIntoView({behavior:'smooth',block:'center'});
+        hideMsg();
+      }
+    }
+    if(e.key==='Escape'){hideMsg();input.blur();}
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.searchbox')){hideMsg();}
+  });
+
+  var faqs=document.querySelectorAll('details.faq');
+  faqs.forEach(function(d){
+    d.addEventListener('toggle',function(){});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"久久艹日中文字幕",
+  "description":"日中双语字幕版本追踪与校对记录，涵盖剧集、电影、纪录片字幕时间轴与字体兼容问题。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"双语字幕里日文行和中文行错位，是片源问题还是字幕问题？",
+      "acceptedAnswer":{"@type":"Answer","text":"多数是字幕文件的行距设置与播放器默认样式冲突。10月18日之后的版本倾向内嵌字幕轨来避免，若用外挂可先统一播放器字体再试。"}
+    },
+    {
+      "@type":"Question",
+      "name":"《夜行列车》第三集的“急行”和“特急”到底怎么区分？",
+      "acceptedAnswer":{"@type":"Answer","text":"急行停靠站多于特急，特急通常需另加特急料金。初版把第12分钟一句广播的“特急”译成“急行”，校对版已改回。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么繁体双语版体积从38KB涨到412KB？",
+      "acceptedAnswer":{"@type":"Answer","text":"11月4日修复版内嵌了字体子集，解决“跡”“邊”等字显示为方块的问题，子集只包含片中实际用到的字。"}
+    },
+    {
+      "@type":"Question",
+      "name":"关西方言注释有必要吗，还是看懂剧情就够了？",
+      "acceptedAnswer":{"@type":"Answer","text":"只追剧情可不看注释。但《京都迷路指南》第五话“おおきに”出现6次，其中一次是告别语，语气差异影响人物关系判断。"}
+    },
+    {
+      "@type":"Question",
+      "name":"同一集有 v1 和 v2，旧版还留着吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"存档保留 v1 供比对但不推荐观看，修改说明可用来判断其他版本是否同源。"}
+    },
+    {
+      "@type":"Question",
+      "name":"手机投屏时字幕太小怎么办？",
+      "acceptedAnswer":{"@type":"Answer","text":"内嵌字幕轨字号固定，投屏觉得小只能改用外挂版本在播放器里放大。这是内嵌方案的代价，10月28日公告已承认。"}
+    }
+  ]
+}
+</script>
+</body>
+  </html>
